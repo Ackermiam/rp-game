@@ -4,8 +4,8 @@
       :src="config.img"
       class="CharacterSlider__character"
     />
-    <img src="/assets/table4.png" class="CharacterSlider__table" />
-    <img src="/assets/select.png" class="CharacterSlider__table__button" @click="setEnemy(config)"/>
+    <img src="../../src/assets/images/table4.png" class="CharacterSlider__table" />
+    <img src="../../src/assets/images/select.png" class="CharacterSlider__table__button" @click="setEnemy(config)"/>
     <div class="CharacterSlider__table__infos">
       <h3>{{ config.name }}</h3>
       <p>{{ config.hp }} PV</p>

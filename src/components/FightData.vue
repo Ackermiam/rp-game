@@ -3,21 +3,21 @@
     <div v-if="roundIsPlaying" class="Fight__Damage">
       <div>
         <div v-if="roundHealPlayer > 0" class="Fight__Damage__score Fight__Damage__score__heal">
-          <img src="/assets/heal.png" />
+          <img src="../../src/assets/images/heal.png" />
           <p class="Fight__Damage__score__heal">+ {{ roundHealPlayer }} HP</p>
         </div>
         <div v-if="roundDamageEnemy > 0" class="Fight__Damage__score Fight__Damage__score__anim">
-          <img src="/assets/sword.png" />
+          <img src="../../src/assets/images/sword.png" />
           <p class="Fight__Damage__score__attack">- {{ roundDamageEnemy }} HP</p>
         </div>
       </div>
       <div>
         <div v-if="roundHealEnemy > 0" class="Fight__Damage__score Fight__Damage__score__heal">
-          <img src="/assets/heal.png" />
+          <img src="../../src/assets/images/heal.png" />
           <p class="Fight__Damage__score__heal">+ {{ roundHealEnemy }} HP</p>
         </div>
         <div v-if="roundDamagePlayer > 0" class="Fight__Damage__score Fight__Damage__score__animEnemy">
-          <img src="/assets/sword.png" />
+          <img src="../../src/assets/images/sword.png" />
           <p class="Fight__Damage__score__attack">- {{ roundDamagePlayer }} HP</p>
         </div>
       </div>

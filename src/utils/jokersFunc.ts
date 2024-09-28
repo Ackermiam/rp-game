@@ -11,21 +11,21 @@ export const DivideDamage = (damageEnemy: number) => {
 };
 
 export const DivineHeal = (heal: number) => {
-  return heal += 20;
+  return heal + 20;
 };
 
 export const DivineDamage = (damage: number) => {
-  return damage += 20;
+  return damage + 20;
 };
 
 export const QuickHeal = (heal: number) => {
-  return heal += 10;
+  return heal + 10;
 };
 
-export const BlockDamage = (damageEnemy: number) => {
-  return damageEnemy = 0;
+export const BlockDamage = () => {
+  return 0;
 };
 
-export const ForceDamage = (damageEnemy: number) => {
-  return damageEnemy = 10;
+export const ForceDamage = () => {
+  return 10;
 };

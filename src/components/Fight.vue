@@ -16,23 +16,23 @@
         <transition name="slide-fade">
           <div v-if="showChosenJoker" class="Fight__dicetable__pack__chosenJoker">
             <img
-              src="/assets/cardjoker.png"
+              src="../../src/assets/images/cardjoker.png"
               class="Fight__dicetable__pack__chosenJoker__joker"
             />
             <p>{{ selectedPlayerJoker.name }}</p>
           </div>
         </transition>
         <img
-          src="/assets/mochi.png"
+          src="../../src/assets/images/mochi.png"
           class="Fight__character Fight__character__hero"
           :class="
             roundHealPlayer > roundDamageEnemy ? 'Fight__character__heal' : ''
           "
         />
-        <img src="/assets/table3.png" class="Fight__image" />
+        <img src="../../src/assets/images/table3.png" class="Fight__image" />
         <div class="Fight__character__info">
           <div class="Fight__character__info__life">
-            <img src="/assets/vie.png" />
+            <img src="../../src/assets/images/vie.png" />
             <h3>{{ hp }} PV</h3>
           </div>
           <div class="Fight__character__info__jokers">
@@ -42,7 +42,7 @@
               @click="toggleAllSettingsForJokerDetails(joker, index)"
             >
               <img
-                src="/assets/cardjoker.png"
+                src="../../src/assets/images/cardjoker.png"
                 class="Fight__character__info__jokers__joker"
               />
               <p>{{ joker.name }}</p>
@@ -55,13 +55,13 @@
           class="Fight__button Fight__button__attack"
           @click="useAttackWithDice()"
         >
-          <img src="/assets/sword.png" />
+          <img src="../../src/assets/images/sword.png" />
         </div>
         <div
           class="Fight__button Fight__button__heal"
           @click="useHealWithDice()"
         >
-          <img src="/assets/heal.png" />
+          <img src="../../src/assets/images/heal.png" />
         </div>
       </div>
     </div>
@@ -70,7 +70,7 @@
         <transition name="slide-fade">
           <div v-if="showChosenEnemyJoker && selectedEnemyJoker" class="Fight__dicetable__pack__chosenJoker">
             <img
-              src="/assets/cardjoker.png"
+              src="../../src/assets/images/cardjoker.png"
               class="Fight__dicetable__pack__chosenJoker__joker"
             />
             <p>{{ selectedEnemyJoker.name }}</p>
@@ -84,19 +84,19 @@
           "
         />
         <img
-          src="/assets/table3.png"
+          src="../../src/assets/images/table3.png"
           class="Fight__image"
           style="transform: scaleX(-1)"
         />
         <div class="Fight__character__info">
           <div class="Fight__character__info__life">
-            <img src="/assets/vie.png" />
+            <img src="../../src/assets/images/vie.png" />
             <h3>{{ enemyHp }} HP</h3>
           </div>
           <div class="Fight__character__info__jokers">
             <div v-for="(joker, index) in enemyJokers" :key="index">
               <img
-                src="/assets/cardjoker.png"
+                src="../../src/assets/images/cardjoker.png"
                 class="Fight__character__info__jokers__joker"
               />
               <p>{{ joker.name }}</p>
@@ -362,7 +362,7 @@ const particlesoptions = {
   max-width: 110px;
   aspect-ratio: 626/533;
   z-index: 1;
-  background: url("../../assets/woodenbutton.png") no-repeat center center;
+  background: url("../..../../src/assets/images/woodenbutton.png") no-repeat center center;
   background-size: cover;
   display: flex;
   justify-content: center;

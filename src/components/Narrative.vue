@@ -1,11 +1,11 @@
 <template>
   <div class="Narrative">
     <ParticlesComp id="tsparticles" :options="particlesoptions" />
-    <img class="Narrative__img" src="/assets/golddicetable.png" />
+    <img class="Narrative__img" src="../../src/assets/images/golddicetable.png" />
     <img
       v-if="isNarrativeCharacter"
       class="Narrative__character"
-      src="/assets/koharu.png"
+      src="../../src/assets/images/koharu.png"
     />
   </div>
 </template>

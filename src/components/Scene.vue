@@ -67,17 +67,17 @@ const { layer1Style, layer2Style } = useParallax();
 const { isNarrative, isFight, isJokers, isIntro, isVersus, isVersusMode } = useGlobal();
 const { setNumberBackground, chosenBackground } = useCharacter();
 
-const bgImage = ref("/assets/scene1_background.png");
-const layer1img = ref("/assets/scene1_foreground.png");
-const layer2img = ref("/assets/scene1_midlayer.png");
+const bgImage = ref("../../src/assets/images/scene1_background.png");
+const layer1img = ref("../../src/assets/images/scene1_foreground.png");
+const layer2img = ref("../../src/assets/images/scene1_midlayer.png");
 
 watch(isVersusMode, (newValue) => {
   if (newValue === true) {
     setNumberBackground();
 
-    bgImage.value = `/assets/scene${chosenBackground.value}_background.png`;
-    layer1img.value = `/assets/scene${chosenBackground.value}_foreground.png`;
-    layer2img.value = `/assets/scene${chosenBackground.value}_midlayer.png`;
+    bgImage.value = `../../src/assets/images/scene${chosenBackground.value}_background.png`;
+    layer1img.value = `../../src/assets/images/scene${chosenBackground.value}_foreground.png`;
+    layer2img.value = `../../src/assets/images/scene${chosenBackground.value}_midlayer.png`;
   }
 });
 </script>
@@ -86,8 +86,8 @@ watch(isVersusMode, (newValue) => {
 .Scene {
   height: 80vh;
   width: 100vw;
-  overflow: hidden; /* Pour cacher tout débordement causé par la transformation */
-  position: relative; /* Nécessaire pour positionner les éléments enfants */
+  overflow: hidden;
+  position: relative;
 }
 
 .Scene__layer1,

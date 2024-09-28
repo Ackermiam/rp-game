@@ -1,7 +1,7 @@
 <template>
-  <img v-if="displayFight" src="/assets/fight.png" class="FightFlag__Fightimg" />
-  <img v-if="displayWin" src="/assets/win.png" class="FightFlag__winimg" />
-  <img v-if="displayLose" src="/assets/lose.png" class="FightFlag__loseimg" />
+  <img v-if="displayFight" src="../../src/assets/images/fight.png" class="FightFlag__Fightimg" />
+  <img v-if="displayWin" src="../../src/assets/images/win.png" class="FightFlag__winimg" />
+  <img v-if="displayLose" src="../../src/assets/images/lose.png" class="FightFlag__loseimg" />
 </template>
 
 <script setup lang="ts">

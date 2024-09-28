@@ -79,7 +79,7 @@ export const useCharacter = () => {
     useJoker === 1 ? enemyChoseJoker(characterenemy) : "";
   };
 
-  const enemyChoseJoker = (person) => {
+  const enemyChoseJoker = (person: PlayerInterface) => {
     const choseJoker = rollDice(person.abilities.length) - 1;
     selectedEnemyJoker.value = person.abilities.splice(choseJoker, 1)[0];
     showChosenEnemyJoker.value = true;

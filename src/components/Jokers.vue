@@ -3,10 +3,10 @@
     <JokerDetail v-if="isDetailJokerComponentActive" :name="chosenJokerName" @activate-joker="selectJoker(currentIndex)"/>
     <div v-if="jokers.length > 0" class="Jokers__imgs">
       <transition name="slide">
-        <img v-show="blockChose === 0" src="/assets/playerturn.png" class="Jokers__turnimg"/>
+        <img v-show="blockChose === 0" src="../../src/assets/images/playerturn.png" class="Jokers__turnimg"/>
       </transition>
       <transition name="slide">
-        <img v-show="blockChose === 1" src="/assets/enemyturn.png" class="Jokers__turnimg"/>
+        <img v-show="blockChose === 1" src="../../src/assets/images/enemyturn.png" class="Jokers__turnimg"/>
       </transition>
     </div>
     <div class="Jokers__support">
@@ -15,7 +15,7 @@
         :key="index"
         :name="joker.name"
         :description="joker.descript"
-        img="/assets/cardjoker.png"
+        img="../../src/assets/images/cardjoker.png"
         @click="blockChose === 1 ? '' : toggleAllSettingsForJokerDetails(joker.name, index)"
       />
     </div>

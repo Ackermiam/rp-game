@@ -2,10 +2,10 @@
   <div class="Intro" ref="introRef">
     <div class="Intro__container">
       <button @click="toggleNarrative()">
-        <img src="/assets/histoire.png" />
+        <img src="../../src/assets/images/histoire.png" />
       </button>
       <button @mouseover="changeBackground" @mouseleave="resetBackground" @click="toggleVersus()">
-        <img src="/assets/versusmodeone.png" />
+        <img src="../../src/assets/images/versusmodeone.png" />
       </button>
       <ParticlesComp
         v-if="showParticles"
@@ -19,7 +19,6 @@
 <script setup lang="ts">
 import { ref } from "vue";
 import { useGlobal } from "../composable/global";
-import Button from "./Button.vue";
 import ParticlesComp from "./Particles.vue";
 
 const introRef = ref<HTMLDivElement | null>(null);
@@ -30,7 +29,7 @@ const {toggleNarrative, toggleVersus} = useGlobal();
 const changeBackground = () => {
   if (introRef.value) {
     introRef.value.style.background =
-      'url("/assets/versusmodebg3.png") no-repeat center center';
+      'url("../../src/assets/images/versusmodebg3.png") no-repeat center center';
     introRef.value.style.backgroundSize = "cover";
   }
   showParticles.value = true;
@@ -39,7 +38,7 @@ const changeBackground = () => {
 const resetBackground = () => {
   if (introRef.value) {
     introRef.value.style.background =
-      'url("/assets/bgmenu.png") no-repeat center center';
+      'url("../../src/assets/images/bgmenu.png") no-repeat center center';
     introRef.value.style.backgroundSize = "cover";
   }
   showParticles.value = false;
@@ -91,7 +90,7 @@ const particlesoptions = {
   width: 100vw;
   overflow: hidden;
   position: relative;
-  background: url("/assets/bgmenu.png") no-repeat center center;
+  background: url("../../src/assets/images/bgmenu.png") no-repeat center center;
   background-size: cover;
   display: flex;
   justify-content: center;
