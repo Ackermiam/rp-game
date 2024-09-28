@@ -54,6 +54,13 @@
       "heal": 20,
       "damage": 8
     },
+    "InnerSun": {
+      "name": "InnerSun",
+      "img": "/assets/characters/innerSun.png",
+      "hp": 75,
+      "heal": 25,
+      "damage": 10
+    },
     "God": {
       "name": "God",
       "img": "/assets/characters/God.png",
