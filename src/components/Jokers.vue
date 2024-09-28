@@ -15,7 +15,7 @@
         :key="index"
         :name="joker.name"
         :description="joker.descript"
-        img="../../src/assets/images/cardjoker.png"
+        img="/rp-game/assets/cardjoker.png"
         @click="blockChose === 1 ? '' : toggleAllSettingsForJokerDetails(joker.name, index)"
       />
     </div>

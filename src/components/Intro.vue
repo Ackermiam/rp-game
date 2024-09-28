@@ -29,7 +29,7 @@ const {toggleNarrative, toggleVersus} = useGlobal();
 const changeBackground = () => {
   if (introRef.value) {
     introRef.value.style.background =
-      'url("../../src/assets/images/versusmodebg3.png") no-repeat center center';
+      'url("/rp-game/assets/versusmodebg3.png") no-repeat center center';
     introRef.value.style.backgroundSize = "cover";
   }
   showParticles.value = true;
@@ -38,7 +38,7 @@ const changeBackground = () => {
 const resetBackground = () => {
   if (introRef.value) {
     introRef.value.style.background =
-      'url("../../src/assets/images/bgmenu.png") no-repeat center center';
+      'url("/rp-game/assets/bgmenu.png") no-repeat center center';
     introRef.value.style.backgroundSize = "cover";
   }
   showParticles.value = false;
@@ -90,7 +90,7 @@ const particlesoptions = {
   width: 100vw;
   overflow: hidden;
   position: relative;
-  background: url("../../src/assets/images/bgmenu.png") no-repeat center center;
+  background: url("/assets/bgmenu.png") no-repeat center center;
   background-size: cover;
   display: flex;
   justify-content: center;

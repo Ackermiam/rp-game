@@ -5,7 +5,7 @@
     <img
       v-if="isNarrativeCharacter"
       class="Narrative__character"
-      src="../../src/assets/images/koharu.png"
+      src="/assets/koharu.png"
     />
   </div>
 </template>

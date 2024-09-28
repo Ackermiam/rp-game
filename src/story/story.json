@@ -7,98 +7,98 @@
   "enemies": {
     "Panda": {
       "name": "Panda",
-      "img": "../../src/assets/images/Kentaro.png",
+      "img": "/rp-game/assets/Kentaro.png",
       "hp": 100,
       "heal": 8,
       "damage": 20
     },
     "Tora": {
       "name": "Tora",
-      "img": "../../src/assets/images/Tora.png",
+      "img": "/rp-game/assets/Tora.png",
       "hp": 85,
       "heal": 8,
       "damage": 20
     },
     "Monk": {
       "name": "Monk",
-      "img": "../../src/assets/images/Monk.png",
+      "img": "/rp-game/assets/Monk.png",
       "hp": 80,
       "heal": 15,
       "damage": 15
     },
     "Boreal": {
       "name": "Boreal",
-      "img": "../../src/assets/images/holy.png",
+      "img": "/rp-game/assets/holy.png",
       "hp": 60,
       "heal": 30,
       "damage": 10
     },
     "Wise": {
       "name": "The Wise",
-      "img": "../../src/assets/images/Wise.png",
+      "img": "/rp-game/assets/Wise.png",
       "hp": 50,
       "heal": 2,
       "damage": 25
     },
     "Vladeus": {
       "name": "Vladeus",
-      "img": "../../src/assets/images/Vladeus.png",
+      "img": "/rp-game/assets/Vladeus.png",
       "hp": 40,
       "heal": 10,
       "damage": 30
     },
     "Kasumi": {
       "name": "Kasumi",
-      "img": "../../src/assets/images/Kasumi.png",
+      "img": "/rp-game/assets/Kasumi.png",
       "hp": 70,
       "heal": 20,
       "damage": 8
     },
     "InnerSun": {
       "name": "InnerSun",
-      "img": "../../src/assets/images/innersun.png",
+      "img": "/rp-game/assets/innersun.png",
       "hp": 75,
       "heal": 25,
       "damage": 10
     },
     "God": {
       "name": "God",
-      "img": "../../src/assets/images/God.png",
+      "img": "/rp-game/assets/God.png",
       "hp": 150,
       "heal": 25,
       "damage": 25
     },
     "Manita": {
       "name": "Manita",
-      "img": "../../src/assets/images/manita.png",
+      "img": "/rp-game/assets/manita.png",
       "hp": 20,
       "heal": 35,
       "damage": 10
     },
     "Kiroshi": {
       "name": "Kiroshi",
-      "img": "../../src/assets/images/Kiroshi.png",
+      "img": "/rp-game/assets/Kiroshi.png",
       "hp": 75,
       "heal": 14,
       "damage": 14
     },
     "VirginsQueen": {
       "name": "Virgins Queen",
-      "img": "../../src/assets/images/VirginsQueen.png",
+      "img": "/rp-game/assets/VirginsQueen.png",
       "hp": 45,
       "heal": 25,
       "damage": 25
     },
     "Yankee": {
       "name": "Yankee",
-      "img": "../../src/assets/images/Yankee.png",
+      "img": "/rp-game/assets/Yankee.png",
       "hp": 50,
       "heal": 10,
       "damage": 30
     },
     "Koharu": {
       "name": "Koharu",
-      "img": "../../src/assets/images/koharu.png",
+      "img": "/rp-game/assets/koharu.png",
       "hp": 40,
       "heal": 10,
       "damage": 15
