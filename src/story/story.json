@@ -1,0 +1,132 @@
+{
+  "character": {
+    "name": "Mochi",
+    "img": "/assets/maison.png",
+    "pv": 100
+  },
+  "enemies": {
+    "Panda": {
+      "name": "Panda",
+      "img": "/assets/characters/Kentaro.png",
+      "hp": 100,
+      "heal": 8,
+      "damage": 20
+    },
+    "Tora": {
+      "name": "Tora",
+      "img": "/assets/characters/Tora.png",
+      "hp": 85,
+      "heal": 8,
+      "damage": 20
+    },
+    "Monk": {
+      "name": "Monk",
+      "img": "/assets/characters/Monk.png",
+      "hp": 80,
+      "heal": 15,
+      "damage": 15
+    },
+    "Boreal": {
+      "name": "Boreal",
+      "img": "/assets/characters/holy.png",
+      "hp": 60,
+      "heal": 30,
+      "damage": 10
+    },
+    "Wise": {
+      "name": "The Wise",
+      "img": "/assets/characters/Wise.png",
+      "hp": 50,
+      "heal": 2,
+      "damage": 25
+    },
+    "Vladeus": {
+      "name": "Vladeus",
+      "img": "/assets/characters/Vladeus.png",
+      "hp": 40,
+      "heal": 10,
+      "damage": 30
+    },
+    "Kasumi": {
+      "name": "Kasumi",
+      "img": "/assets/characters/Kasumi.png",
+      "hp": 70,
+      "heal": 20,
+      "damage": 8
+    },
+    "God": {
+      "name": "God",
+      "img": "/assets/characters/God.png",
+      "hp": 150,
+      "heal": 25,
+      "damage": 25
+    },
+    "Manita": {
+      "name": "Manita",
+      "img": "/assets/characters/manita.png",
+      "hp": 20,
+      "heal": 35,
+      "damage": 10
+    },
+    "Kiroshi": {
+      "name": "Kiroshi",
+      "img": "/assets/characters/Kiroshi.png",
+      "hp": 75,
+      "heal": 14,
+      "damage": 14
+    },
+    "VirginsQueen": {
+      "name": "Virgins Queen",
+      "img": "/assets/characters/VirginsQueen.png",
+      "hp": 45,
+      "heal": 25,
+      "damage": 25
+    },
+    "Yankee": {
+      "name": "Yankee",
+      "img": "/assets/characters/Yankee.png",
+      "hp": 50,
+      "heal": 10,
+      "damage": 30
+    },
+    "Koharu": {
+      "name": "Koharu",
+      "img": "/assets/characters/koharu.png",
+      "hp": 40,
+      "heal": 10,
+      "damage": 15
+    }
+  },
+  "backgrounds": {
+    "1": {
+      "background": "scene1_background.png",
+      "foreground": "scene1_foreground.png",
+      "midlayer": "scene1_midlayer.png"
+    },
+    "2": {
+      "background": "scene2_background.png",
+      "foreground": "scene2_foreground.png",
+      "midlayer": "scene2_midlayer.png"
+    },
+    "3": {
+      "background": "scene3_background.png",
+      "foreground": "scene3_foreground.png",
+      "midlayer": "scene3_midlayer.png"
+    },
+    "4": {
+      "background": "scene4_background.png",
+      "foreground": "scene4_foreground.png",
+      "midlayer": "scene4_midlayer.png"
+    }
+  },
+  "story": {
+    "scenes": {
+      "1": {},
+      "2": {},
+      "3": {},
+      "4": {},
+      "5": {},
+      "6": {}
+    }
+  }
+}
