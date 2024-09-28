@@ -56,7 +56,7 @@
     },
     "InnerSun": {
       "name": "InnerSun",
-      "img": "/assets/characters/innerSun.png",
+      "img": "/assets/characters/innersun.png",
       "hp": 75,
       "heal": 25,
       "damage": 10
