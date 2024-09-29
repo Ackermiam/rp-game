@@ -68,8 +68,8 @@ export const useCharacter = () => {
         : person.heal(amount);
     }
     if (person === characterenemy) {
-      characterenemy.hp + amount > maxLifeEnemy
-        ? (characterenemy.hp = maxLifeEnemy)
+      characterenemy.hp + amount > maxLifeEnemy.value
+        ? (characterenemy.hp = maxLifeEnemy.value)
         : person.heal(amount);
     }
   };

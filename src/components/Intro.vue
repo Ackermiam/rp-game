@@ -1,7 +1,7 @@
 <template>
   <div class="Intro" ref="introRef">
     <div class="Intro__container">
-      <button @click="toggleNarrative()">
+      <button @click="temporarilyStoryMode()">
         <img src="../../src/assets/images/histoire.png" />
       </button>
       <button @mouseover="changeBackground" @mouseleave="resetBackground" @click="toggleVersus()">
@@ -43,6 +43,11 @@ const resetBackground = () => {
   }
   showParticles.value = false;
 };
+
+const temporarilyStoryMode = () => {
+  alert('En cours de développement, seul le VersusMode est disponible pour le moment')
+
+}
 
 const particlesoptions = {
   fpsLimit: 40,

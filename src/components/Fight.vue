@@ -16,7 +16,7 @@
         <transition name="slide-fade">
           <div v-if="showChosenJoker" class="Fight__dicetable__pack__chosenJoker">
             <img
-              src="/rp-game/assets/cardjoker.png"
+              src="/assets/cardjoker.png"
               class="Fight__dicetable__pack__chosenJoker__joker"
             />
             <p>{{ selectedPlayerJoker.name }}</p>
@@ -42,7 +42,7 @@
               @click="toggleAllSettingsForJokerDetails(joker, index)"
             >
               <img
-                src="/rp-game/assets/cardjoker.png"
+                src="/assets/cardjoker.png"
                 class="Fight__character__info__jokers__joker"
               />
               <p>{{ joker.name }}</p>
@@ -70,7 +70,7 @@
         <transition name="slide-fade">
           <div v-if="showChosenEnemyJoker && selectedEnemyJoker" class="Fight__dicetable__pack__chosenJoker">
             <img
-              src="/rp-game/assets/cardjoker.png"
+              src="/assets/cardjoker.png"
               class="Fight__dicetable__pack__chosenJoker__joker"
             />
             <p>{{ selectedEnemyJoker.name }}</p>
@@ -96,7 +96,7 @@
           <div class="Fight__character__info__jokers">
             <div v-for="(joker, index) in enemyJokers" :key="index">
               <img
-                src="/rp-game/assets/cardjoker.png"
+                src="/assets/cardjoker.png"
                 class="Fight__character__info__jokers__joker"
               />
               <p>{{ joker.name }}</p>

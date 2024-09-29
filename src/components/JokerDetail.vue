@@ -7,7 +7,7 @@
           transform: `rotateX(${y / 2}deg) rotateY(${-x / 2}deg)`,
         }"
       >
-        <img src="/rp-game/assets/cardjoker.png" class="JokerDetail__img" />
+        <img src="/assets/cardjoker.png" class="JokerDetail__img" />
         <div class="JokerDetail__infos">
           <h3>Nom de la carte</h3>
           <p>{{ jokerInfos.name }}</p>
