@@ -81,25 +81,6 @@ onMounted(() => {
 </script>
 
 <style scoped>
-.Fight {
-  position: absolute;
-  height: 101%;
-  width: 100vw;
-  left: 50%;
-  bottom: 0;
-  transform: translateX(-50%);
-  background: linear-gradient(
-    180deg,
-    rgba(0, 0, 0, 0.795) 0%,
-    rgba(0, 0, 0, 0.351) 50%,
-    rgba(0, 0, 0, 0.802) 100%
-  );
-  display: flex;
-  align-items: end;
-  justify-content: space-between;
-  padding: 0 20px;
-}
-
 .Fight__dicetable {
   display: flex;
   justify-content: center;
