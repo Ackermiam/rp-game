@@ -4,45 +4,45 @@
       <div class="Fight__dicetable__pack">
         <transition name="slide-fade">
           <div
-            v-if="showChosenJoker"
+            v-if="showChosenEnemyJoker && selectedEnemyJoker"
             class="Fight__dicetable__pack__chosenJoker"
           >
             <img
               src="/assets/cardjoker.png"
               class="Fight__dicetable__pack__chosenJoker__joker"
             />
-            <p>{{ selectedPlayerJoker.name }}</p>
+            <p>{{ selectedEnemyJoker.name }}</p>
           </div>
         </transition>
         <img
-          src="../../src/assets/images/mochi.png"
-          class="Fight__character Fight__character__hero"
+          :src="chosenEnemy.img"
+          class="Fight__character Fight__character__enemy"
           :class="
-            roundHealPlayer > roundDamageEnemy ? 'Fight__character__heal' : ''
+            roundHealEnemy > roundDamagePlayer ? 'Fight__character__heal' : ''
           "
         />
-        <img src="../../src/assets/images/table3.png" class="Fight__image" />
+        <img
+          src="../../src/assets/images/table3.png"
+          class="Fight__image"
+          style="transform: scaleX(-1)"
+        />
         <div class="Fight__character__info">
           <div class="Fight__character__info__life">
             <div class="Fight__character__info__life__other">
               <img src="../../src/assets/images/sword.png" />
-              <p>20</p>
+              <p>{{ chosenEnemy.damage }}</p>
             </div>
             <div class="Fight__character__info__life__other Fight__character__info__life__other--life">
               <img src="../../src/assets/images/vie.png" />
-              <h3>{{ hp }} PV</h3>
+              <h3>{{ enemyHp }} PV</h3>
             </div>
             <div class="Fight__character__info__life__other">
               <img src="../../src/assets/images/heal.png" />
-              <p>20</p>
+              <p>{{ chosenEnemy.heal }}</p>
             </div>
           </div>
           <div class="Fight__character__info__jokers">
-            <div
-              v-for="(joker, index) in playerJokers"
-              :key="index"
-              @click="toggleAllSettingsForJokerDetails(joker, index)"
-            >
+            <div v-for="(joker, index) in enemyJokers" :key="index">
               <img
                 src="/assets/cardjoker.png"
                 class="Fight__character__info__jokers__joker"
@@ -50,20 +50,6 @@
               <p>{{ joker.name }}</p>
             </div>
           </div>
-        </div>
-      </div>
-      <div>
-        <div
-          class="Fight__button Fight__button__attack"
-          @click="useAttackWithDice()"
-        >
-          <img src="../../src/assets/images/sword.png" />
-        </div>
-        <div
-          class="Fight__button Fight__button__heal"
-          @click="useHealWithDice()"
-        >
-          <img src="../../src/assets/images/heal.png" />
         </div>
       </div>
     </div>
@@ -79,17 +65,25 @@ const {
   useAttackWithDice,
   useHealWithDice,
   hp,
+  enemyHp,
   roundHealPlayer,
+  roundHealEnemy,
+  roundDamagePlayer,
   roundDamageEnemy,
   fightIsFinished,
   playerJokers,
+  enemyJokers,
   selectedPlayerJoker,
+  selectedEnemyJoker,
+  character,
+  chosenEnemy,
 } = useCharacter();
 
 const {
   isDetailJokerComponentActive,
   setJokerName,
   showChosenJoker,
+  showChosenEnemyJoker,
 } = useJoker();
 
 const toggleAllSettingsForJokerDetails = (
@@ -105,6 +99,45 @@ const toggleAllSettingsForJokerDetails = (
 onMounted(() => {
   fightIsFinished.value = false;
 });
+
+const particlesoptions = {
+  fpsLimit: 40,
+  particles: {
+    number: {
+      value: 200,
+      density: {
+        enable: true,
+      },
+    },
+    color: {
+      value: ["#fdcf58", "#757676", "#f27d0c", "#800909", "#f07f13"],
+    },
+    opacity: {
+      value: { min: 0.1, max: 0.5 },
+    },
+    size: {
+      value: { min: 1, max: 3 },
+    },
+    move: {
+      enable: true,
+      speed: 6,
+      random: false,
+    },
+  },
+  interactivity: {
+    detectsOn: "window",
+    events: {
+      onClick: {
+        enable: true,
+        mode: "push",
+      },
+    },
+  },
+  background: {
+    image:
+      "radial-gradient(circle, rgba(74,0,0,0.5) 50%, rgba(0,0,0,0.4) 100%)",
+  },
+};
 </script>
 
 <style scoped>
