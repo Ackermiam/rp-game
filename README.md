@@ -17,6 +17,8 @@ I think this is the next features/updates :
 - Make the game really responsive
 - Create a unique joker for each character
 - A BIG REFACTO FOR THIS SHITTY CODE
+- Compress images
+- Develop STORY MODE ?
 
 # CHANGELOGS
 
