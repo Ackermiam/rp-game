@@ -1,15 +1,5 @@
 <template>
   <div class="Fight">
-    <ParticlesComp id="tsparticlestwo" :options="particlesoptions" />
-    <FightFlag />
-    <FightData />
-    <JokerDetail
-      v-if="isDetailJokerComponentActive"
-      :name="chosenJokerName"
-      @activate-joker="
-        validateJokerSelection(character, selectedPlayerJoker.index)
-      "
-    />
     <div class="Fight__dicetable">
       <div class="Fight__dicetable__pack">
         <transition name="slide-fade">
@@ -137,15 +127,10 @@
 import { onMounted } from "vue";
 import { useCharacter } from "../composable/character";
 import { useJoker } from "../composable/joker";
-import ParticlesComp from "./Particles.vue";
-import FightFlag from "./FightFlag.vue";
-import FightData from "./FightData.vue";
-import JokerDetail from "./JokerDetail.vue";
 
 const {
   useAttackWithDice,
   useHealWithDice,
-  validateJokerSelection,
   hp,
   enemyHp,
   roundHealPlayer,
@@ -163,7 +148,6 @@ const {
 
 const {
   isDetailJokerComponentActive,
-  chosenJokerName,
   setJokerName,
   showChosenJoker,
   showChosenEnemyJoker,
