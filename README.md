@@ -4,6 +4,19 @@ This template should help get you started developing with Vue 3 and TypeScript i
 
 Learn more about the recommended Project Setup and IDE Support in the [Vue Docs TypeScript Guide](https://vuejs.org/guide/typescript/overview.html#project-setup).
 
+# About this game :
+
+Simple fight game, just a prototype to learn how to make a game.
+
+Here is the game => [Click here to play](https://ackermiam.github.io/rp-game/)
+
+I think this is the next features/updates :
+
+- Select the main character
+- Add some animations
+- Make the game really responsive
+- Create a unique joker for each character
+- A BIG REFACTO FOR THIS SHITTY CODE
 
 # CHANGELOGS
 
