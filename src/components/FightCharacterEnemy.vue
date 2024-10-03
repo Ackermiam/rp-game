@@ -32,7 +32,9 @@
               <img src="../../src/assets/images/sword.png" />
               <p>{{ chosenEnemy.damage }}</p>
             </div>
-            <div class="Fight__character__info__life__other Fight__character__info__life__other--life">
+            <div
+              class="Fight__character__info__life__other Fight__character__info__life__other--life"
+            >
               <img src="../../src/assets/images/vie.png" />
               <h3>{{ enemyHp }} PV</h3>
             </div>
@@ -62,82 +64,20 @@ import { useCharacter } from "../composable/character";
 import { useJoker } from "../composable/joker";
 
 const {
-  useAttackWithDice,
-  useHealWithDice,
-  hp,
   enemyHp,
-  roundHealPlayer,
   roundHealEnemy,
   roundDamagePlayer,
-  roundDamageEnemy,
   fightIsFinished,
-  playerJokers,
   enemyJokers,
-  selectedPlayerJoker,
   selectedEnemyJoker,
-  character,
   chosenEnemy,
 } = useCharacter();
 
-const {
-  isDetailJokerComponentActive,
-  setJokerName,
-  showChosenJoker,
-  showChosenEnemyJoker,
-} = useJoker();
-
-const toggleAllSettingsForJokerDetails = (
-  joker: Record<string, string | boolean | number>,
-  index: number
-) => {
-  setJokerName(joker.name);
-  isDetailJokerComponentActive.value = true;
-  joker.index = index;
-  selectedPlayerJoker.value = joker;
-};
+const { showChosenEnemyJoker } = useJoker();
 
 onMounted(() => {
   fightIsFinished.value = false;
 });
-
-const particlesoptions = {
-  fpsLimit: 40,
-  particles: {
-    number: {
-      value: 200,
-      density: {
-        enable: true,
-      },
-    },
-    color: {
-      value: ["#fdcf58", "#757676", "#f27d0c", "#800909", "#f07f13"],
-    },
-    opacity: {
-      value: { min: 0.1, max: 0.5 },
-    },
-    size: {
-      value: { min: 1, max: 3 },
-    },
-    move: {
-      enable: true,
-      speed: 6,
-      random: false,
-    },
-  },
-  interactivity: {
-    detectsOn: "window",
-    events: {
-      onClick: {
-        enable: true,
-        mode: "push",
-      },
-    },
-  },
-  background: {
-    image:
-      "radial-gradient(circle, rgba(74,0,0,0.5) 50%, rgba(0,0,0,0.4) 100%)",
-  },
-};
 </script>
 
 <style scoped>
@@ -243,11 +183,12 @@ const particlesoptions = {
   color: rgb(0, 255, 149);
 }
 
-.Fight__character__info__life__other img, p{
+.Fight__character__info__life__other img,
+p {
   margin: 0 !important;
 }
 
-.Fight__character__info__life__other--life{
+.Fight__character__info__life__other--life {
   margin-bottom: 20px;
 }
 
