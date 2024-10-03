@@ -22,8 +22,8 @@ const {
 const chosenEnemy = ref();
 const chosenBackground = ref();
 
-const character: PlayerInterface = reactive(new Player("Mochi", 100, []));
-const characterenemy: PlayerInterface = reactive(new Player("", 0, []));
+const character: PlayerInterface = reactive(new Player("Mochi", 100, [], 0, 0));
+const characterenemy: PlayerInterface = reactive(new Player("", 0, [], 0, 0));
 
 const roundState = reactive({
   damagePlayer: 0,
@@ -41,7 +41,7 @@ const displayFight = ref(true);
 const displayWin = ref(false);
 const displayLose = ref(false);
 
-const maxLifeEnemy = ref(characterenemy.hp);
+let maxLifeEnemy = characterenemy.hp;
 const maxLifePlayer = character.hp;
 
 export const useCharacter = () => {
@@ -49,7 +49,9 @@ export const useCharacter = () => {
     chosenEnemy.value = config;
     characterenemy.hp = chosenEnemy.value.hp;
     characterenemy.name = chosenEnemy.value.name;
-    maxLifeEnemy.value = chosenEnemy.value.hp;
+    characterenemy.maxdamage = chosenEnemy.value.damage;
+    characterenemy.maxheal = chosenEnemy.value.heal;
+    maxLifeEnemy = chosenEnemy.value.hp;
     toggleFight();
   };
 
@@ -68,8 +70,8 @@ export const useCharacter = () => {
         : person.heal(amount);
     }
     if (person === characterenemy) {
-      characterenemy.hp + amount > maxLifeEnemy.value
-        ? (characterenemy.hp = maxLifeEnemy.value)
+      characterenemy.hp + amount > maxLifeEnemy
+        ? (characterenemy.hp = maxLifeEnemy)
         : person.heal(amount);
     }
   };

@@ -4,11 +4,15 @@ export default class Player implements PlayerInterface {
   public name: string;
   public hp: number;
   public abilities: Record<string, string | boolean>[];
+  public maxheal: number;
+  public maxdamage: number;
 
-  constructor(name: string, hp: number, abilities: Record<string, string | boolean>[]) {
+  constructor(name: string, hp: number, abilities: Record<string, string | boolean>[], maxheal: number, maxdamage: number) {
     this.name = name;
     this.hp = hp;
     this.abilities = abilities;
+    this.maxheal = maxheal;
+    this.maxdamage = maxdamage;
   }
 
   public attack(enemy: PlayerInterface, damage: number): void {

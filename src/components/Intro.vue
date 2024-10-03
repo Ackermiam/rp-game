@@ -13,6 +13,7 @@
         :options="particlesoptions"
       />
     </div>
+    <p class="Intro__version">Version {{ Version.version }}</p>
   </div>
 </template>
 
@@ -20,6 +21,7 @@
 import { ref } from "vue";
 import { useGlobal } from "../composable/global";
 import ParticlesComp from "./Particles.vue";
+import Version from "../../package.json"
 
 const introRef = ref<HTMLDivElement | null>(null);
 const showParticles = ref(false);
@@ -113,6 +115,14 @@ const particlesoptions = {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.Intro__version {
+  position: absolute;
+  bottom: 10px;
+  color: #000;
+  font-size: .9em;
+  margin: 0;
 }
 
 button {

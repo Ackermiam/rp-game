@@ -5,4 +5,6 @@ export interface PlayerInterface {
   attack: Function;
   heal: Function;
   resetStat: Function;
+  maxheal: number;
+  maxdamage: number;
 }
