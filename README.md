@@ -19,6 +19,7 @@ I think this is the next features/updates :
 - A BIG REFACTO FOR THIS SHITTY CODE
 - Compress images
 - Develop STORY MODE ?
+- Insert an animation of dice while select action ?
 
 # CHANGELOGS
 
