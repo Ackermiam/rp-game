@@ -302,37 +302,4 @@ p {
 .FightCharacterEnemy__button__heal:hover img {
   filter: drop-shadow(0 0 10px rgb(0, 255, 115));
 }
-
-@keyframes shrinkToTop {
-  0% {
-    transform: translate(-50%, -40%) scale(1.5); /* Position initiale au centre en bas */
-  }
-  100% {
-    transform: translate(-50%, -100%) scale(0.5); /* Rétrécit et monte vers le haut */
-  }
-}
-
-@keyframes pulsateFinishFight {
-  0% {
-    transform: translate(-50%, -40%) scale(0.8); /* Taille normale */
-  }
-  50% {
-    transform: translate(-50%, -40%) scale(1); /* Grossit de 10% */
-  }
-  100% {
-    transform: translate(-50%, -40%) scale(0.8); /* Retour à la taille normale */
-  }
-}
-
-@keyframes pulsateFinishFight {
-  0% {
-    transform: translate(-50%, -40%) scale(0.8); /* Taille normale */
-  }
-  50% {
-    transform: translate(-50%, -40%) scale(1); /* Grossit de 10% */
-  }
-  100% {
-    transform: translate(-50%, -40%) scale(0.8); /* Retour à la taille normale */
-  }
-}
 </style>
