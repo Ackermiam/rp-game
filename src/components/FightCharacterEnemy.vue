@@ -17,7 +17,9 @@
         :src="chosenEnemy.img"
         class="FightCharacterEnemy__character FightCharacterEnemy__character__enemy"
         :class="
-          roundHealEnemy > roundDamagePlayer ? 'FightCharacterEnemy__character__heal' : ''
+          roundHealEnemy > roundDamagePlayer
+            ? 'FightCharacterEnemy__character__heal'
+            : ''
         "
       />
       <img
@@ -314,5 +316,24 @@ p {
 
 .FightCharacterEnemy__button__heal:hover img {
   filter: drop-shadow(0 0 10px rgb(0, 255, 115));
+}
+
+@media (max-width: 1200px) {
+  .FightCharacterEnemy__character__info__life img {
+    max-width: 25px;
+  }
+
+  .FightCharacterEnemy__character__info__life__other {
+    margin-right: 2vw;
+    font-size: 1.2vw !important;
+  }
+
+  .FightCharacterEnemy__character__info__life h3 {
+    font-size: 1.2vw;
+  }
+
+  .FightCharacterEnemy__character__info__life__other--life {
+    margin-bottom: 10px;
+  }
 }
 </style>

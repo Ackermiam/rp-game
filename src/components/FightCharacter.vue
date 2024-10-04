@@ -337,8 +337,25 @@ p {
 }
 
 @media (max-width: 1200px) {
-  .Fight__button__attack {
-    
+  .Fight__button {
+    max-width: 70px;
+  }
+
+  .Fight__character__info__life img {
+    max-width: 25px;
+  }
+
+  .Fight__character__info__life__other {
+    margin-right: 2vw;
+    font-size: 1.2vw !important;
+  }
+
+  .Fight__character__info__life h3 {
+    font-size: 1.2vw;
+  }
+
+  .Fight__character__info__life__other--life {
+    margin-bottom: 10px;
   }
 }
 </style>
