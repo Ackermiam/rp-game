@@ -89,6 +89,13 @@ const handleMouseUpOrLeave = () => {
   padding-bottom: 200px;
 }
 
+@media (max-width: 1200px) {
+  .slider-container {
+
+  padding-bottom: 45px;
+}
+}
+
 .slider-container::-webkit-scrollbar {
   display: none;
 }

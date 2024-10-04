@@ -8,9 +8,22 @@
     <img src="../../src/assets/images/select.png" class="CharacterSlider__table__button" @click="setEnemy(config)"/>
     <div class="CharacterSlider__table__infos">
       <h3>{{ config.name }}</h3>
-      <p>{{ config.hp }} PV</p>
-      <p>Dégâts Max : {{ config.damage }}</p>
-      <p>Heal Max : {{ config.heal }}</p>
+      <div class="CharacterSlider__table__infos__info">
+        <div class="CharacterSlider__table__infos__info">
+          <img src="../../src/assets/images/sword.png" />
+          <p>{{ config.damage }}</p>
+        </div>
+        <div
+          class="CharacterSlider__table__infos__info"
+        >
+          <img src="../../src/assets/images/vie.png" />
+          <p>{{ config.hp }} PV</p>
+        </div>
+        <div class="CharacterSlider__table__infos__info">
+          <img src="../../src/assets/images/heal.png" />
+          <p>{{ config.heal }}</p>
+        </div>
+      </div>
     </div>
   </div>
 </template>
@@ -48,6 +61,7 @@ defineProps<{
   filter: blur(2px);
 }
 
+
 .CharacterSlider__table__button {
   position: absolute;
   width: 250px;
@@ -70,16 +84,45 @@ defineProps<{
 }
 
 .CharacterSlider__table__infos p {
-  margin-top: 0;
-  margin-bottom: 5px;
+  margin: 0;
 }
 
 .CharacterSlider__table__infos h3 {
   margin-top: 0;
-  margin-bottom: 5px;
+  margin-bottom: 15px;
   font-size: 1.5em;
   color: #ffffff;
   text-shadow: rgb(0, 0, 0) 1px 0 15px;
+}
+
+.CharacterSlider__table__infos__info {
+  display: flex;
+}
+
+.CharacterSlider__table__infos__info div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 1.7vw;
+  font-size: 1.3vw !important;
+  color: rgb(255, 76, 121);
+  font-weight: 600;
+  filter: drop-shadow(0 0 10px rgba(90, 90, 90, 0.808));
+}
+
+.CharacterSlider__table__infos__info div img {
+  width: 5vw;
+  max-width: 35px;
+  height: auto;
+  object-fit: contain;
+}
+
+.CharacterSlider__table__infos__info:first-child {
+  color: rgb(0, 255, 149);
+}
+.CharacterSlider__table__infos__info:last-child {
+  margin-right: 0;
+  color: rgb(0, 255, 149);
 }
 
 .CharacterSlider:hover .CharacterSlider__table {
@@ -97,5 +140,37 @@ defineProps<{
   top: -120%;
   height: 300px;
   transition: all .3s ease;
+}
+
+@media (max-width: 1200px) {
+  .CharacterSlider__table {
+    min-width: 120px;
+    width: 20vw;
+  }
+
+  .CharacterSlider__character {
+    height: 170px;
+    top: -95%;
+  }
+
+  .CharacterSlider__table__button {
+    width: 150px;
+    bottom: -20%;
+  }
+
+  .CharacterSlider__table__infos h3 {
+    font-size: 1em;
+    margin-bottom: 5px;
+  }
+
+  .CharacterSlider__table__infos p {
+    font-size: .9em;
+    margin: 0;
+    margin-bottom: 10px;
+  }
+
+  .CharacterSlider__table__infos__info div img {
+    max-width: 25px;
+  }
 }
 </style>
