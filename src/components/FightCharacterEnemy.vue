@@ -231,6 +231,19 @@ p {
   z-index: 1;
   aspect-ratio: 468/350;
   max-height: 325px;
+  max-width: 480px;
+  width: 25vw;
+}
+
+@media (max-width: 1200px) {
+  .FightCharacterEnemy__image {
+    width: 23vw;
+  }
+
+  .FightCharacterEnemy__character__info__jokers__joker {
+    width: 7vw;
+    max-width: 50px;
+  }
 }
 
 .FightCharacterEnemy__character {

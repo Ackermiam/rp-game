@@ -80,7 +80,8 @@ const {
   selectedPlayerJoker,
 } = useCharacter();
 
-const { isDetailJokerComponentActive, setJokerName, showChosenJoker } = useJoker();
+const { isDetailJokerComponentActive, setJokerName, showChosenJoker } =
+  useJoker();
 
 const toggleAllSettingsForJokerDetails = (
   joker: Record<string, string | boolean | number>,
@@ -105,6 +106,7 @@ onMounted(() => {
   flex-grow: 1;
   position: relative;
   min-width: 0;
+  margin-right: 4vw;
 }
 
 .Fight__dicetable__pack:hover .Fight__image {
@@ -250,6 +252,18 @@ p {
   z-index: 1;
   aspect-ratio: 468/350;
   max-height: 325px;
+  max-width: 480px;
+  width: 25vw;
+}
+
+@media (max-width: 1200px) {
+  .Fight__image {
+    width: 23vw;
+  }
+  .Fight__character__info__jokers__joker {
+    width: 7vw;
+    max-width: 50px;
+  }
 }
 
 .Fight__character {
@@ -320,5 +334,11 @@ p {
 
 .Fight__button__heal:hover img {
   filter: drop-shadow(0 0 10px rgb(0, 255, 115));
+}
+
+@media (max-width: 1200px) {
+  .Fight__button__attack {
+    
+  }
 }
 </style>
