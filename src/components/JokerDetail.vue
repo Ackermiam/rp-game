@@ -16,8 +16,12 @@
         </div>
       </div>
       <div class="JokerDetail__actions">
-        <Button text="Activer" :filled="false" @click="$emit('activate-joker')"/>
-        <Button text="Retour" :filled="false" @click="quitInterface()"/>
+        <Button
+          text="Activer"
+          :filled="false"
+          @click="$emit('activate-joker')"
+        />
+        <Button text="Retour" :filled="false" @click="quitInterface()" />
       </div>
     </div>
   </transition>
@@ -27,7 +31,7 @@
 import { ref, Ref, onMounted, onUnmounted } from "vue";
 import { returnRightJoker } from "../utils/jokers";
 import { useJoker } from "../composable/joker";
-import Button from "./Button.vue"
+import Button from "./Button.vue";
 
 const { isDetailJokerComponentActive } = useJoker();
 
@@ -41,7 +45,7 @@ const y = ref(0);
 
 const quitInterface = () => {
   isDetailJokerComponentActive.value = false;
-}
+};
 
 const getMouseValue = (event: MouseEvent) => {
   const { innerWidth, innerHeight } = window;
@@ -118,5 +122,18 @@ h3 {
   font-size: 1vw;
   margin-bottom: 0;
   color: rgb(201, 164, 0);
+}
+
+@media (max-width: 1200px) {
+  .JokerDetail__img {
+    width: 15vw;
+  }
+
+  .JokerDetail__container {
+    margin-bottom: 5vw;
+  }
+  .JokerDetail__infos {
+    width: 10vw;
+  }
 }
 </style>

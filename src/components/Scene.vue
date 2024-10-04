@@ -58,7 +58,7 @@ import { useParallax } from "../composable/parallax";
 import { useGlobal } from "../composable/global";
 import { useCharacter } from "../composable/character";
 import Narrative from "../components/Narrative.vue";
-import Fight from "./Fight.vue";
+import Fight from "./Fight/Fight.vue";
 import Jokers from "./Jokers.vue";
 import Intro from "./Intro.vue";
 import VersusMode from "./VersusMode.vue";
@@ -209,15 +209,48 @@ watch(isVersusMode, (newValue) => {
   }
 }
 
-@keyframes pulsateFinishFight {
+@keyframes damageAnimation {
   0% {
-    transform: translate(-50%, -40%) scale(0.8); /* Taille normale */
+    transform: translateX(10px);
+    opacity: 0;
   }
-  50% {
-    transform: translate(-50%, -40%) scale(1); /* Grossit de 10% */
+  30% {
+    transform: translateX(-25px);
+    opacity: 1;
   }
   100% {
-    transform: translate(-50%, -40%) scale(0.8); /* Retour à la taille normale */
+    transform: translateX(-30px);
+    opacity: 0;
+  }
+}
+
+@keyframes damageEnemyAnimation {
+  0% {
+    transform: translateX(-10px);
+    opacity: 0;
+  }
+  30% {
+    transform: translateX(25px);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(30px); /* Retour à l'état normal */
+    opacity: 0;
+  }
+}
+
+@keyframes healAnimation {
+  0% {
+    transform: translateY(0px);
+    opacity: 0;
+  }
+  30% {
+    transform: translateY(-25px); /* Deuxième zoom */
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-30px); /* Retour à l'état normal */
+    opacity: 0;
   }
 }
 </style>

@@ -23,24 +23,24 @@
         "
       />
       <img
-        src="../../src/assets/images/table3.png"
+        src="../../../src/assets/images/table3.png"
         class="FightCharacterEnemy__image"
         style="transform: scaleX(-1)"
       />
       <div class="FightCharacterEnemy__character__info">
         <div class="FightCharacterEnemy__character__info__life">
           <div class="FightCharacterEnemy__character__info__life__other">
-            <img src="../../src/assets/images/sword.png" />
+            <img src="../../../src/assets/images/sword.png" />
             <p>{{ chosenEnemy.damage }}</p>
           </div>
           <div
             class="FightCharacterEnemy__character__info__life__other FightCharacterEnemy__character__info__life__other--life"
           >
-            <img src="../../src/assets/images/vie.png" />
+            <img src="../../../src/assets/images/vie.png" />
             <h3>{{ enemyHp }} PV</h3>
           </div>
           <div class="FightCharacterEnemy__character__info__life__other">
-            <img src="../../src/assets/images/heal.png" />
+            <img src="../../../src/assets/images/heal.png" />
             <p>{{ chosenEnemy.heal }}</p>
           </div>
         </div>
@@ -60,8 +60,8 @@
 
 <script setup lang="ts">
 import { onMounted } from "vue";
-import { useCharacter } from "../composable/character";
-import { useJoker } from "../composable/joker";
+import { useCharacter } from "../../composable/character";
+import { useJoker } from "../../composable/joker";
 
 const {
   enemyHp,
@@ -268,7 +268,7 @@ p {
   max-width: 110px;
   aspect-ratio: 626/533;
   z-index: 1;
-  background: url("../../src/assets/images/woodenbutton.png") no-repeat center
+  background: url("../../../src/assets/images/woodenbutton.png") no-repeat center
     center;
   background-size: cover;
   display: flex;

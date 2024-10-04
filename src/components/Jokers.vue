@@ -104,7 +104,7 @@ const selectJokerEnemy = () => {
 }
 
 .Jokers__support {
-  width: 70vw;
+  width: 100vw;
   display: flex;
   justify-content: space-evenly;
   align-items: center;

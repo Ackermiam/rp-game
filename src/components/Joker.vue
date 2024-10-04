@@ -30,7 +30,7 @@ defineProps<{
 }
 
 .Joker__image-wrapper {
-  position: relative; /* Conteneur de l'image et du texte, permet de superposer le texte */
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -50,34 +50,52 @@ defineProps<{
 }
 
 .Joker__name {
-  color: rgb(201, 164, 0); /* Pour que le texte soit visible sur l'image */
+  color: rgb(201, 164, 0);
   font-size: .9vw;
   font-weight: 600;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
   margin: 0;
-  pointer-events: none; /* Pour que le texte ne bloque pas les clics */
+  pointer-events: none;
   text-align: center;
   padding: 0 20px;
   margin-bottom: 10px;
 }
 
 .Joker__description {
-  color: #fff; /* Pour que le texte soit visible sur l'image */
+  color: #fff;
   font-size: .8vw;
   font-weight: 600;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
   margin: 0;
-  pointer-events: none; /* Pour que le texte ne bloque pas les clics */
+  pointer-events: none;
   text-align: center;
   padding: 0 20px;
 }
 
 @media (max-width: 1200px) {
   .Joker__name {
-    font-size: 1.3vw; /* Taille de police pour les écrans de moins de 1200px */
+    font-size: 1.2vw;
   }
   .Joker__description {
-    font-size: 1.2vw; /* Taille de police pour les écrans de moins de 1200px */
+    font-size: 1.1vw;
+  }
+
+  .Joker__img {
+    max-width: 110px;
+    width: 16vw;
+  }
+}
+
+@media (max-width: 800px) {
+  .Joker__name {
+    font-size: 1.1vw;
+  }
+  .Joker__description {
+    font-size: .9vw;
+  }
+  .Joker__img {
+    max-width: 80px;
+    width: 16vw;
   }
 }
 </style>

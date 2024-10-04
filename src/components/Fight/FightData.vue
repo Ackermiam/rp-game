@@ -3,21 +3,21 @@
     <div v-if="roundIsPlaying" class="Fight__Damage">
       <div>
         <div v-if="roundHealPlayer > 0" class="Fight__Damage__score Fight__Damage__score__heal">
-          <img src="../../src/assets/images/heal.png" />
+          <img src="../../../src/assets/images/heal.png" />
           <p class="Fight__Damage__score__heal">+ {{ roundHealPlayer }} HP</p>
         </div>
         <div v-if="roundDamageEnemy > 0" class="Fight__Damage__score Fight__Damage__score__anim">
-          <img src="../../src/assets/images/sword.png" />
+          <img src="../../../src/assets/images/sword.png" />
           <p class="Fight__Damage__score__attack">- {{ roundDamageEnemy }} HP</p>
         </div>
       </div>
       <div>
         <div v-if="roundHealEnemy > 0" class="Fight__Damage__score Fight__Damage__score__heal">
-          <img src="../../src/assets/images/heal.png" />
+          <img src="../../../src/assets/images/heal.png" />
           <p class="Fight__Damage__score__heal">+ {{ roundHealEnemy }} HP</p>
         </div>
         <div v-if="roundDamagePlayer > 0" class="Fight__Damage__score Fight__Damage__score__animEnemy">
-          <img src="../../src/assets/images/sword.png" />
+          <img src="../../../src/assets/images/sword.png" />
           <p class="Fight__Damage__score__attack">- {{ roundDamagePlayer }} HP</p>
         </div>
       </div>
@@ -26,7 +26,7 @@
 </template>
 
 <script setup lang="ts">
-import { useCharacter } from "../composable/character";
+import { useCharacter } from "../../composable/character";
 
 const {
   roundDamagePlayer,
@@ -84,55 +84,10 @@ const {
 }
 
 .Fight__Damage__score img {
-  width: 5vw; /* Ajuste la taille selon la largeur de la vue */
-  max-width: 60px; /* Taille maximale */
+  width: 5vw;
+  max-width: 60px;
   height: auto;
-  object-fit: contain; /* Maintient le ratio de l'image */
+  object-fit: contain;
   margin-right: 10px;
-}
-
-@keyframes damageAnimation {
-  0% {
-    transform: translateX(10px);
-    opacity: 0;
-  }
-  30% {
-    transform: translateX(-25px); /* Deuxième zoom */
-    opacity: 1;
-  }
-  100% {
-    transform: translateX(-30px); /* Retour à l'état normal */
-    opacity: 0;
-  }
-}
-
-@keyframes damageEnemyAnimation {
-  0% {
-    transform: translateX(-10px);
-    opacity: 0;
-  }
-  30% {
-    transform: translateX(25px); /* Deuxième zoom */
-    opacity: 1;
-  }
-  100% {
-    transform: translateX(30px); /* Retour à l'état normal */
-    opacity: 0;
-  }
-}
-
-@keyframes healAnimation {
-  0% {
-    transform: translateY(0px);
-    opacity: 0;
-  }
-  30% {
-    transform: translateY(-25px); /* Deuxième zoom */
-    opacity: 1;
-  }
-  100% {
-    transform: translateY(-30px); /* Retour à l'état normal */
-    opacity: 0;
-  }
 }
 </style>

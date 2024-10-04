@@ -34,7 +34,7 @@ const jokers = [
   {
     name: "Bouclier Divin",
     func: "BlockDamage",
-    descript: "Bloque entièrement les dégâts ennemi pendant ce tour",
+    descript: "Bloque les dégâts ennemi pendant ce tour",
     isBlockingTour: false,
     effect: "damageEnemy",
     effectEnemy: "damagePlayer"

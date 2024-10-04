@@ -11,27 +11,27 @@
         </div>
       </transition>
       <img
-        src="../../src/assets/images/mochi.png"
+        src="../../../src/assets/images/mochi.png"
         class="Fight__character Fight__character__hero"
         :class="
           roundHealPlayer > roundDamageEnemy ? 'Fight__character__heal' : ''
         "
       />
-      <img src="../../src/assets/images/table3.png" class="Fight__image" />
+      <img src="../../../src/assets/images/table3.png" class="Fight__image" />
       <div class="Fight__character__info">
         <div class="Fight__character__info__life">
           <div class="Fight__character__info__life__other">
-            <img src="../../src/assets/images/sword.png" />
+            <img src="../../../src/assets/images/sword.png" />
             <p>20</p>
           </div>
           <div
             class="Fight__character__info__life__other Fight__character__info__life__other--life"
           >
-            <img src="../../src/assets/images/vie.png" />
+            <img src="../../../src/assets/images/vie.png" />
             <h3>{{ hp }} PV</h3>
           </div>
           <div class="Fight__character__info__life__other">
-            <img src="../../src/assets/images/heal.png" />
+            <img src="../../../src/assets/images/heal.png" />
             <p>20</p>
           </div>
         </div>
@@ -55,10 +55,10 @@
         class="Fight__button Fight__button__attack"
         @click="useAttackWithDice()"
       >
-        <img src="../../src/assets/images/sword.png" />
+        <img src="../../../src/assets/images/sword.png" />
       </div>
       <div class="Fight__button Fight__button__heal" @click="useHealWithDice()">
-        <img src="../../src/assets/images/heal.png" />
+        <img src="../../../src/assets/images/heal.png" />
       </div>
     </div>
   </div>
@@ -66,8 +66,8 @@
 
 <script setup lang="ts">
 import { onMounted } from "vue";
-import { useCharacter } from "../composable/character";
-import { useJoker } from "../composable/joker";
+import { useCharacter } from "../../composable/character";
+import { useJoker } from "../../composable/joker";
 
 const {
   useAttackWithDice,
@@ -188,6 +188,16 @@ p {
   margin: 0 !important;
 }
 
+.Fight__character__info__life__other img:after {
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: inherit;
+  filter: blur(20px);
+  z-index: -1;
+}
+
 .Fight__character__info__life__other--life {
   margin-bottom: 20px;
 }
@@ -286,7 +296,7 @@ p {
   max-width: 110px;
   aspect-ratio: 626/533;
   z-index: 1;
-  background: url("../../src/assets/images/woodenbutton.png") no-repeat center
+  background: url("../../../src/assets/images/woodenbutton.png") no-repeat center
     center;
   background-size: cover;
   display: flex;
