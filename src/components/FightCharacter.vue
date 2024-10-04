@@ -338,7 +338,7 @@ p {
 
 @media (max-width: 1200px) {
   .Fight__button {
-    max-width: 70px;
+    max-width: 7vw;
   }
 
   .Fight__character__info__life img {

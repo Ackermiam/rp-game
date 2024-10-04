@@ -1,31 +1,37 @@
 <template>
-  <img v-if="displayFight" src="../../src/assets/images/fight.png" class="FightFlag__Fightimg" />
-  <img v-if="displayWin" src="../../src/assets/images/win.png" class="FightFlag__winimg" />
-  <img v-if="displayLose" src="../../src/assets/images/lose.png" class="FightFlag__loseimg" />
+  <img
+    v-if="displayFight"
+    src="../../src/assets/images/fight.png"
+    class="FightFlag__Fightimg"
+  />
+  <img
+    v-if="displayWin"
+    src="../../src/assets/images/win.png"
+    class="FightFlag__winimg"
+  />
+  <img
+    v-if="displayLose"
+    src="../../src/assets/images/lose.png"
+    class="FightFlag__loseimg"
+  />
 </template>
 
 <script setup lang="ts">
-import { onUnmounted } from 'vue';
+import { onUnmounted } from "vue";
 import { useCharacter } from "../composable/character";
 import { useGlobal } from "../composable/global";
 
 onUnmounted(() => {
   resetFlag();
-})
+});
 
-const {
-  displayFight,
-  displayWin,
-  displayLose,
-  resetFlag
-} = useCharacter();
+const { displayFight, displayWin, displayLose, resetFlag } = useCharacter();
 
 const { isJokers } = useGlobal();
 
 setTimeout(() => {
   isJokers.value = true;
-}, 1800)
-
+}, 1800);
 </script>
 
 <style scoped>
@@ -36,6 +42,12 @@ setTimeout(() => {
   transform: translate(-50%, -40%) scale(1.5); /* Position initiale */
   animation: shrinkToTop 0.7s forwards; /* Applique l'animation une seule fois */
   animation-delay: 1s;
+}
+@media (max-width: 1200px) {
+  .FightFlag__Fightimg {
+    top: 40vh;
+    width: 50vw;
+  }
 }
 
 .FightFlag__winimg,
