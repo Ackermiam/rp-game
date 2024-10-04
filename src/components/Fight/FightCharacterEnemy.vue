@@ -254,10 +254,6 @@ p {
   max-height: 100%;
 }
 
-.FightCharacterEnemy__character__hero {
-  animation: pulsate 8s infinite;
-}
-
 .FightCharacterEnemy__character__enemy {
   animation: pulsate 8s infinite;
   animation-delay: 2s;

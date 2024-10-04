@@ -183,19 +183,8 @@ onMounted(() => {
   color: rgb(0, 255, 149);
 }
 
-.Fight__character__info__life__other img,
-p {
+.Fight__character__info__life__other img, p {
   margin: 0 !important;
-}
-
-.Fight__character__info__life__other img:after {
-  content: '';
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  background: inherit;
-  filter: blur(20px);
-  z-index: -1;
 }
 
 .Fight__character__info__life__other--life {
@@ -286,18 +275,13 @@ p {
   animation: pulsate 8s infinite;
 }
 
-.Fight__character__enemy {
-  animation: pulsate 8s infinite;
-  animation-delay: 2s;
-}
-
 .Fight__button {
   width: 10vw;
   max-width: 110px;
   aspect-ratio: 626/533;
   z-index: 1;
-  background: url("../../../src/assets/images/woodenbutton.png") no-repeat center
-    center;
+  background: url("../../../src/assets/images/woodenbutton.png") no-repeat
+    center center;
   background-size: cover;
   display: flex;
   justify-content: center;
