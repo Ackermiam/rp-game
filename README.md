@@ -28,3 +28,5 @@ I think this is the next features/updates :
 > Fix enemy heal issue. Enemies can heal themselves again.
 >
 > Characters now have their statistics displayed in combat
+>
+> Begin responsive mode

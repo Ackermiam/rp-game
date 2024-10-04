@@ -43,12 +43,6 @@ setTimeout(() => {
   animation: shrinkToTop 0.7s forwards; /* Applique l'animation une seule fois */
   animation-delay: 1s;
 }
-@media (max-width: 1200px) {
-  .FightFlag__Fightimg {
-    top: 40vh;
-    width: 50vw;
-  }
-}
 
 .FightFlag__winimg,
 .FightFlag__loseimg {
@@ -58,6 +52,13 @@ setTimeout(() => {
   transform: translate(-50%, -40%) scale(0.8); /* Position initiale */
   animation: pulsateFinishFight 1s infinite;
   max-width: 70vw;
+}
+
+@media (max-width: 1200px) {
+  .FightFlag__Fightimg {
+    top: 40vh;
+    width: 50vw;
+  }
 }
 
 @keyframes shrinkToTop {
