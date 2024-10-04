@@ -1,70 +1,64 @@
 <template>
-  <div class="Fight">
-    <div class="Fight__dicetable">
-      <div class="Fight__dicetable__pack">
-        <transition name="slide-fade">
+  <div class="Fight__dicetable">
+    <div class="Fight__dicetable__pack">
+      <transition name="slide-fade">
+        <div v-if="showChosenJoker" class="Fight__dicetable__pack__chosenJoker">
+          <img
+            src="/assets/cardjoker.png"
+            class="Fight__dicetable__pack__chosenJoker__joker"
+          />
+          <p>{{ selectedPlayerJoker.name }}</p>
+        </div>
+      </transition>
+      <img
+        src="../../src/assets/images/mochi.png"
+        class="Fight__character Fight__character__hero"
+        :class="
+          roundHealPlayer > roundDamageEnemy ? 'Fight__character__heal' : ''
+        "
+      />
+      <img src="../../src/assets/images/table3.png" class="Fight__image" />
+      <div class="Fight__character__info">
+        <div class="Fight__character__info__life">
+          <div class="Fight__character__info__life__other">
+            <img src="../../src/assets/images/sword.png" />
+            <p>20</p>
+          </div>
           <div
-            v-if="showChosenJoker"
-            class="Fight__dicetable__pack__chosenJoker"
+            class="Fight__character__info__life__other Fight__character__info__life__other--life"
+          >
+            <img src="../../src/assets/images/vie.png" />
+            <h3>{{ hp }} PV</h3>
+          </div>
+          <div class="Fight__character__info__life__other">
+            <img src="../../src/assets/images/heal.png" />
+            <p>20</p>
+          </div>
+        </div>
+        <div class="Fight__character__info__jokers">
+          <div
+            v-for="(joker, index) in playerJokers"
+            :key="index"
+            @click="toggleAllSettingsForJokerDetails(joker, index)"
           >
             <img
               src="/assets/cardjoker.png"
-              class="Fight__dicetable__pack__chosenJoker__joker"
+              class="Fight__character__info__jokers__joker"
             />
-            <p>{{ selectedPlayerJoker.name }}</p>
-          </div>
-        </transition>
-        <img
-          src="../../src/assets/images/mochi.png"
-          class="Fight__character Fight__character__hero"
-          :class="
-            roundHealPlayer > roundDamageEnemy ? 'Fight__character__heal' : ''
-          "
-        />
-        <img src="../../src/assets/images/table3.png" class="Fight__image" />
-        <div class="Fight__character__info">
-          <div class="Fight__character__info__life">
-            <div class="Fight__character__info__life__other">
-              <img src="../../src/assets/images/sword.png" />
-              <p>20</p>
-            </div>
-            <div class="Fight__character__info__life__other Fight__character__info__life__other--life">
-              <img src="../../src/assets/images/vie.png" />
-              <h3>{{ hp }} PV</h3>
-            </div>
-            <div class="Fight__character__info__life__other">
-              <img src="../../src/assets/images/heal.png" />
-              <p>20</p>
-            </div>
-          </div>
-          <div class="Fight__character__info__jokers">
-            <div
-              v-for="(joker, index) in playerJokers"
-              :key="index"
-              @click="toggleAllSettingsForJokerDetails(joker, index)"
-            >
-              <img
-                src="/assets/cardjoker.png"
-                class="Fight__character__info__jokers__joker"
-              />
-              <p>{{ joker.name }}</p>
-            </div>
+            <p>{{ joker.name }}</p>
           </div>
         </div>
       </div>
-      <div>
-        <div
-          class="Fight__button Fight__button__attack"
-          @click="useAttackWithDice()"
-        >
-          <img src="../../src/assets/images/sword.png" />
-        </div>
-        <div
-          class="Fight__button Fight__button__heal"
-          @click="useHealWithDice()"
-        >
-          <img src="../../src/assets/images/heal.png" />
-        </div>
+    </div>
+    <div>
+      <div
+        class="Fight__button Fight__button__attack"
+        @click="useAttackWithDice()"
+      >
+        <img src="../../src/assets/images/sword.png" />
+      </div>
+      <div class="Fight__button Fight__button__heal" @click="useHealWithDice()">
+        <img src="../../src/assets/images/heal.png" />
       </div>
     </div>
   </div>
@@ -86,11 +80,8 @@ const {
   selectedPlayerJoker,
 } = useCharacter();
 
-const {
-  isDetailJokerComponentActive,
-  setJokerName,
-  showChosenJoker,
-} = useJoker();
+const { isDetailJokerComponentActive, setJokerName, showChosenJoker } =
+  useJoker();
 
 const toggleAllSettingsForJokerDetails = (
   joker: Record<string, string | boolean | number>,
@@ -191,11 +182,12 @@ onMounted(() => {
   color: rgb(0, 255, 149);
 }
 
-.Fight__character__info__life__other img, p{
+.Fight__character__info__life__other img,
+p {
   margin: 0 !important;
 }
 
-.Fight__character__info__life__other--life{
+.Fight__character__info__life__other--life {
   margin-bottom: 20px;
 }
 
