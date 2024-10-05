@@ -40,6 +40,13 @@
       "heal": 2,
       "damage": 25
     },
+    "Heavent": {
+      "name": "Maître Heavent",
+      "img": "/rp-game/assets/heavent.png",
+      "hp": 160,
+      "heal": 25,
+      "damage": 7
+    },
     "Vladeus": {
       "name": "Vladeus",
       "img": "/rp-game/assets/Vladeus.png",

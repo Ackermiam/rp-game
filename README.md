@@ -30,3 +30,5 @@ I think this is the next features/updates :
 > Characters now have their statistics displayed in combat
 >
 > Begin responsive mode
+>
+> Add character : Heavent
