@@ -1,7 +1,7 @@
 {
   "character": {
     "name": "Mochi",
-    "img": "/skins/maison.png",
+    "img": "/rp-game/assets/mochi.png",
     "pv": 100
   },
   "enemies": {
