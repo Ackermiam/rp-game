@@ -4,12 +4,15 @@ import { rollDice } from "../utils/dice";
 import { calculatePercent } from "../utils/percent";
 import { useGlobal } from "./global";
 import { useJoker } from "../composable/joker";
+import { useFightFlag } from "../composable/fightFlag";
 import Player from "../characters/player";
 import story from "../story/story.json";
 import * as jokers from "../utils/jokersFunc";
 
-const { toggleNarrative, toggleFight, toggleVersus, isVersusMode } =
-  useGlobal();
+const { toggleNarrative, toggleFight, toggleVersus, isVersusMode } = useGlobal();
+
+const { displayFight, displayWin, displayLose} = useFightFlag();
+
 const {
   isDetailJokerComponentActive,
   showChosenJoker,
@@ -36,10 +39,6 @@ const playerAlreadyPlayed = ref(true);
 const currentRound = ref(1);
 const roundIsPlaying = ref(false);
 const fightIsFinished = ref(false);
-
-const displayFight = ref(true);
-const displayWin = ref(false);
-const displayLose = ref(false);
 
 let maxLifeEnemy = characterenemy.hp;
 const maxLifePlayer = character.hp;
