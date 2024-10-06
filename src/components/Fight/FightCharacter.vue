@@ -11,12 +11,13 @@
         </div>
       </transition>
       <img
-        src="../../../src/assets/images/mochi.png"
-        class="Fight__character Fight__character__hero"
-        :class="
-          roundHealPlayer > roundDamageEnemy ? 'Fight__character__heal' : ''
-        "
-      />
+  src="../../../src/assets/images/mochi.png"
+  class="Fight__character"
+  :class="[
+    'Fight__character__hero', // Toujours appliquer cette classe
+    toggleAttackAnimation ? 'Fight__character__attack' : ''
+  ]"
+/>
       <img src="../../../src/assets/images/table3.png" class="Fight__image" />
       <div class="Fight__character__info">
         <div class="Fight__character__info__life">
@@ -51,10 +52,7 @@
       </div>
     </div>
     <div>
-      <div
-        class="Fight__button Fight__button__attack"
-        @click="useAttackWithDice()"
-      >
+      <div class="Fight__button Fight__button__attack" @click="attack()">
         <img src="../../../src/assets/images/sword.png" />
       </div>
       <div class="Fight__button Fight__button__heal" @click="useHealWithDice()">
@@ -65,7 +63,7 @@
 </template>
 
 <script setup lang="ts">
-import { onMounted } from "vue";
+import { ref, onMounted } from "vue";
 import { useCharacter } from "../../composable/character";
 import { useJoker } from "../../composable/joker";
 
@@ -92,6 +90,18 @@ const toggleAllSettingsForJokerDetails = (
   joker.index = index;
   selectedPlayerJoker.value = joker;
 };
+
+const attack = () => {
+  toggleAttackAnimation.value = true;
+
+  useAttackWithDice();
+
+  setTimeout(() => {
+    toggleAttackAnimation.value = false;
+  }, 300);
+};
+
+const toggleAttackAnimation = ref(false);
 
 onMounted(() => {
   fightIsFinished.value = false;
@@ -183,7 +193,8 @@ onMounted(() => {
   color: rgb(0, 255, 149);
 }
 
-.Fight__character__info__life__other img, p {
+.Fight__character__info__life__other img,
+p {
   margin: 0 !important;
 }
 
@@ -275,6 +286,10 @@ onMounted(() => {
   animation: pulsate 8s infinite;
 }
 
+.Fight__character__attack {
+  animation: attack .3s ease-in-out;
+}
+
 .Fight__button {
   width: 10vw;
   max-width: 110px;
@@ -350,6 +365,24 @@ onMounted(() => {
 
   .Fight__character__info__life__other--life {
     margin-bottom: 10px;
+  }
+}
+
+@keyframes attack {
+  0% {
+    transform: translateX(0);
+  }
+  10% {
+    transform: translateX(-25px);
+    filter: blur(4px);
+  }
+  80% {
+    transform: translateX(60px);
+    filter: blur(2px);
+  }
+  100% {
+    transform: translateX(0);
+    filter: blur(0);
   }
 }
 </style>
