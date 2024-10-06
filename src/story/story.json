@@ -5,6 +5,13 @@
     "pv": 100
   },
   "enemies": {
+    "Mochi": {
+      "name": "Mochi",
+      "img": "/rp-game/assets/mochi.png",
+      "hp": 100,
+      "heal": 20,
+      "damage": 20
+    },
     "Panda": {
       "name": "Panda",
       "img": "/rp-game/assets/Kentaro.png",
@@ -138,16 +145,6 @@
       "background": "scene4_background.png",
       "foreground": "scene4_foreground.png",
       "midlayer": "scene4_midlayer.png"
-    }
-  },
-  "story": {
-    "scenes": {
-      "1": {},
-      "2": {},
-      "3": {},
-      "4": {},
-      "5": {},
-      "6": {}
     }
   }
 }
