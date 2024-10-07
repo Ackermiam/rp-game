@@ -82,6 +82,13 @@
       "heal": 25,
       "damage": 25
     },
+    "Esypso": {
+      "name": "Esypso",
+      "img": "/rp-game/assets/esypso.png",
+      "hp": 51,
+      "heal": 1,
+      "damage": 44
+    },
     "BigBoy": {
       "name": "BigBoy",
       "img": "/rp-game/assets/elbigboss.png",
