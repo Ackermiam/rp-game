@@ -98,7 +98,7 @@
     },
     "KeroSan": {
       "name": "KeroSan",
-      "img": "/rp-game/assets/kerosan.png",
+      "img": "/rp-game/assets/kero.png",
       "hp": 117,
       "heal": 17,
       "damage": 27
