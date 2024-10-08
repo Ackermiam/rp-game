@@ -96,6 +96,13 @@
       "heal": 5,
       "damage": 5
     },
+    "KeroSan": {
+      "name": "KeroSan",
+      "img": "/rp-game/assets/kerosan.png",
+      "hp": 117,
+      "heal": 17,
+      "damage": 27
+    },
     "Manita": {
       "name": "Manita",
       "img": "/rp-game/assets/manita.png",
