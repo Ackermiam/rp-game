@@ -23,6 +23,10 @@ I think this is the next features/updates :
 
 # CHANGELOGS
 
+## 0.1.2
+
+> New Background
+
 ## 0.1.1
 
 > Add new character : Kero
