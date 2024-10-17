@@ -19,7 +19,7 @@
         @click="blockChose === 1 ? '' : toggleAllSettingsForJokerDetails(joker.name, index)"
       />
     </div>
-    <button v-if="selectRandom" @click="selectRandomJoker()">Choix aléatoire</button>
+    <Button v-if="selectRandom" :filled="false" @click="selectRandomJokers()" text="Choix aléatoire" style="margin-top: 25px"/>
   </div>
 </template>
 
@@ -31,6 +31,7 @@ import { useGlobal } from "../composable/global";
 import { useJoker } from "../composable/joker";
 import JokerDetail from "./JokerDetail.vue";
 import Joker from "./Joker.vue";
+import Button from "./Button.vue";
 
 const { playerAlreadyPlayed, pushJoker } = useCharacter();
 const { isJokers } = useGlobal();
@@ -64,8 +65,9 @@ const selectJoker = (index: number) => {
   }, 2000);
 };
 
-const selectRandomJoker = () => {
+const selectRandomJokers = () => {
   selectRandom.value = false;
+  selectRandomJoker();
 }
 
 const selectJokerEnemy = () => {
@@ -73,6 +75,14 @@ const selectJokerEnemy = () => {
   const [chosenJoker] = jokers.value.splice(random, 1);
   pushJoker("enemy", chosenJoker);
 };
+
+const selectRandomJoker = () => {
+  for(let i = 0; i < jokers.value.length; i++) {
+    blockChose.value = 1;
+    const random = Math.floor(Math.random() * jokers.value.length);
+    selectJoker(random);
+  }
+}
 </script>
 
 <style scoped>
