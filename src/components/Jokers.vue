@@ -19,6 +19,7 @@
         @click="blockChose === 1 ? '' : toggleAllSettingsForJokerDetails(joker.name, index)"
       />
     </div>
+    <button v-if="selectRandom" @click="selectRandomJoker()">Choix aléatoire</button>
   </div>
 </template>
 
@@ -37,6 +38,7 @@ const { isJokers } = useGlobal();
 const jokers = ref(choseJokers());
 const currentIndex = ref();
 const blockChose = ref(0);
+const selectRandom = ref(true);
 
 const { isDetailJokerComponentActive, chosenJokerName, setJokerName } =
   useJoker();
@@ -61,6 +63,10 @@ const selectJoker = (index: number) => {
     }
   }, 2000);
 };
+
+const selectRandomJoker = () => {
+  selectRandom.value = false;
+}
 
 const selectJokerEnemy = () => {
   const random = Math.floor(Math.random() * jokers.value.length);
