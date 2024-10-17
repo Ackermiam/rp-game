@@ -23,6 +23,10 @@ I think this is the next features/updates :
 
 # CHANGELOGS
 
+## 0.1.3
+
+> Before fight, jokers can be allocated randomly with a new button on jokers choice
+
 ## 0.1.2
 
 > New Background
