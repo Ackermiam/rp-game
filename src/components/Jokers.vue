@@ -1,6 +1,6 @@
 <template>
   <div class="Jokers">
-    <JokerDetail v-if="isDetailJokerComponentActive" :name="chosenJokerName" @activate-joker="selectJoker(currentIndex)"/>
+    <JokerDetail v-if="isDetailJokerComponentActive" :name="chosenJokerName" @activate-joker="selectRandom = false; selectJoker(currentIndex)"/>
     <div v-if="jokers.length > 0" class="Jokers__imgs">
       <transition name="slide">
         <img v-show="blockChose === 0" src="../../src/assets/images/playerturn.png" class="Jokers__turnimg"/>
