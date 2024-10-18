@@ -25,22 +25,17 @@ import ParticlesComp from "../Particles.vue";
 import FightFlag from "./FightFlag.vue";
 import FightData from "./FightData.vue";
 import JokerDetail from "../JokerDetail.vue";
-import FightCharacter from "./FightCharacter.vue"
-import FightCharacterEnemy from "./FightCharacterEnemy.vue"
+import FightCharacter from "./FightCharacter.vue";
+import FightCharacterEnemy from "./FightCharacterEnemy.vue";
 
 const {
-
   validateJokerSelection,
   fightIsFinished,
   selectedPlayerJoker,
   character,
 } = useCharacter();
 
-const {
-  isDetailJokerComponentActive,
-  chosenJokerName,
-} = useJoker();
-
+const { isDetailJokerComponentActive, chosenJokerName } = useJoker();
 
 onMounted(() => {
   fightIsFinished.value = false;

@@ -64,7 +64,8 @@ import Intro from "./Intro.vue";
 import VersusMode from "./VersusMode.vue";
 
 const { layer1Style, layer2Style } = useParallax();
-const { isNarrative, isFight, isJokers, isIntro, isVersus, isVersusMode } = useGlobal();
+const { isNarrative, isFight, isJokers, isIntro, isVersus, isVersusMode } =
+  useGlobal();
 const { setNumberBackground, chosenBackground } = useCharacter();
 
 const bgImage = ref("/rp-game/assets/scene1_background.png");
@@ -101,7 +102,7 @@ watch(isVersusMode, (newValue) => {
 
 .slide-fade-enter-active,
 .slide-fade-leave-active {
-  transition: opacity 1s; 
+  transition: opacity 1s;
 }
 
 .slide-fade-enter-from {

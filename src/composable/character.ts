@@ -9,9 +9,10 @@ import Player from "../characters/player";
 import story from "../story/story.json";
 import * as jokers from "../utils/jokersFunc";
 
-const { toggleNarrative, toggleFight, toggleVersus, isVersusMode } = useGlobal();
+const { toggleNarrative, toggleFight, toggleVersus, isVersusMode } =
+  useGlobal();
 
-const { displayFight, displayWin, displayLose} = useFightFlag();
+const { displayFight, displayWin, displayLose } = useFightFlag();
 
 const {
   isDetailJokerComponentActive,
@@ -65,7 +66,7 @@ export const useCharacter = () => {
     maxLifePlayer = chosenPlayer.value.hp;
     isPlayerChosen.value = true;
     console.log(config);
-  }
+  };
 
   const setNumberBackground = () => {
     chosenBackground.value = rollDice(Object.keys(story.backgrounds).length);

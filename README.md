@@ -12,8 +12,6 @@ Here is the game => [Click here to play](https://ackermiam.github.io/rp-game/)
 
 I think this is the next features/updates :
 
-- Select the main character
-- Add some animations
 - Make the game really responsive
 - Create a unique joker for each character
 - A BIG REFACTO FOR THIS SHITTY CODE
@@ -25,7 +23,7 @@ I think this is the next features/updates :
 
 ## 0.1.4
 
-> You can chose your player and your enemy 
+> You can chose your player and your enemy
 
 ## 0.1.3
 
