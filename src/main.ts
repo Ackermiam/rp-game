@@ -2,7 +2,6 @@ import { createApp } from 'vue'
 import './style.css'
 import App from './App.vue'
 import Particles from '@tsparticles/vue3';
-//import { loadFireworksPreset } from "@tsparticles/preset-fireworks";
 import { loadSlim } from "@tsparticles/slim";
 
 createApp(App).use(Particles, {
