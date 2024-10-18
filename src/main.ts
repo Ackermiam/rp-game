@@ -6,7 +6,6 @@ import { loadSlim } from "@tsparticles/slim";
 
 createApp(App).use(Particles, {
   init: async engine => {
-    // await loadFull(engine);
     await loadSlim(engine);
   }
 }).mount("#app");
