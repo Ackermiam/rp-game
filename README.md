@@ -23,6 +23,10 @@ I think this is the next features/updates :
 
 # CHANGELOGS
 
+## 0.1.4
+
+> You can chose your player and your enemy 
+
 ## 0.1.3
 
 > Before fight, jokers can be allocated randomly with a new button on jokers choice
