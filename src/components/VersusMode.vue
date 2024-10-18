@@ -1,5 +1,6 @@
 <template>
   <div class="VersusMode">
+    <SelectFlag />
     <div
       class="slider-container"
       @mouseup="handleMouseUpOrLeave"
@@ -24,6 +25,7 @@
 import { ref } from "vue";
 import story from "../story/story.json";
 import CharacterSlider from "./CharacterSlider.vue";
+import SelectFlag from "./SelectFlag.vue";
 
 const sliderContainer = ref<HTMLElement | null>(null);
 

@@ -1,8 +1,8 @@
 <template>
   <div class="Fight">
     <ParticlesComp id="tsparticlestwo" :options="particlesoptions" />
-    <FightFlag />
     <FightData />
+    <FightFlag />
     <JokerDetail
       v-if="isDetailJokerComponentActive"
       :name="chosenJokerName"

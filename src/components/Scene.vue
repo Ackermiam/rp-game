@@ -209,6 +209,15 @@ watch(isVersusMode, (newValue) => {
   }
 }
 
+@keyframes shrinkToTopSelect {
+  0% {
+    transform: translate(-50%, -40%) scale(1.5); /* Position initiale au centre en bas */
+  }
+  100% {
+    transform: translate(-50%, -100%) scale(1.1); /* Rétrécit et monte vers le haut */
+  }
+}
+
 @keyframes pulsateFinishFight {
   0% {
     transform: translate(-50%, -40%) scale(0.8); /* Taille normale */
@@ -257,11 +266,11 @@ watch(isVersusMode, (newValue) => {
     opacity: 0;
   }
   30% {
-    transform: translateY(-25px); /* Deuxième zoom */
+    transform: translateY(-25px);
     opacity: 1;
   }
   100% {
-    transform: translateY(-30px); /* Retour à l'état normal */
+    transform: translateY(-30px);
     opacity: 0;
   }
 }

@@ -369,18 +369,19 @@ p {
 
 @keyframes attack {
   0% {
-    transform: translateX(0);
+    transform: translateX(0) scaleX(-1);
+
   }
   10% {
-    transform: translateX(-25px);
+    transform: translateX(-25px) scaleX(-1);
     filter: blur(4px);
   }
   80% {
-    transform: translateX(60px);
+    transform: translateX(60px) scaleX(-1);
     filter: blur(2px);
   }
   100% {
-    transform: translateX(0);
+    transform: translateX(0) scaleX(-1);
     filter: blur(0);
   }
 }
