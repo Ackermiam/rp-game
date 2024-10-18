@@ -1,12 +1,12 @@
 <template>
   <img
     v-if="!isPlayerChosen"
-    src="/rp-game/assets/selectplayer.png"
+    src="../assets/images/selectplayer.png"
     class="SelectFlag__Player"
   />
   <img
     v-if="isPlayerChosen"
-    src="/rp-game/assets/selectenemy.png"
+    src="../assets/images/selectenemy.png"
     class="SelectFlag__Player"
   />
 </template>
