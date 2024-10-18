@@ -96,12 +96,12 @@ watch(isVersusMode, (newValue) => {
   width: 100%;
   position: absolute;
   transition: transform 0.1s ease-out;
-  will-change: transform; /* Optimisation pour les animations */
+  will-change: transform;
 }
 
 .slide-fade-enter-active,
 .slide-fade-leave-active {
-  transition: opacity 1s; /* Applique la transition sur l'opacité et la transformation */
+  transition: opacity 1s; 
 }
 
 .slide-fade-enter-from {
@@ -202,31 +202,31 @@ watch(isVersusMode, (newValue) => {
 
 @keyframes shrinkToTop {
   0% {
-    transform: translate(-50%, -40%) scale(1.5); /* Position initiale au centre en bas */
+    transform: translate(-50%, -40%) scale(1.5);
   }
   100% {
-    transform: translate(-50%, -100%) scale(0.5); /* Rétrécit et monte vers le haut */
+    transform: translate(-50%, -100%) scale(0.5);
   }
 }
 
 @keyframes shrinkToTopSelect {
   0% {
-    transform: translate(-50%, -40%) scale(1.5); /* Position initiale au centre en bas */
+    transform: translate(-50%, -40%) scale(1.5);
   }
   100% {
-    transform: translate(-50%, -100%) scale(1.1); /* Rétrécit et monte vers le haut */
+    transform: translate(-50%, -100%) scale(1.1);
   }
 }
 
 @keyframes pulsateFinishFight {
   0% {
-    transform: translate(-50%, -40%) scale(0.8); /* Taille normale */
+    transform: translate(-50%, -40%) scale(0.8);
   }
   50% {
-    transform: translate(-50%, -40%) scale(1); /* Grossit de 10% */
+    transform: translate(-50%, -40%) scale(1);
   }
   100% {
-    transform: translate(-50%, -40%) scale(0.8); /* Retour à la taille normale */
+    transform: translate(-50%, -40%) scale(0.8);
   }
 }
 
@@ -255,7 +255,7 @@ watch(isVersusMode, (newValue) => {
     opacity: 1;
   }
   100% {
-    transform: translateX(30px); /* Retour à l'état normal */
+    transform: translateX(30px);
     opacity: 0;
   }
 }
