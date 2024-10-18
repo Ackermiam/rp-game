@@ -11,10 +11,10 @@
         </div>
       </transition>
       <img
-  src="../../../src/assets/images/mochi.png"
+  :src="chosenPlayer.img"
   class="Fight__character"
   :class="[
-    'Fight__character__hero', // Toujours appliquer cette classe
+    'Fight__character__hero',
     toggleAttackAnimation ? 'Fight__character__attack' : ''
   ]"
 />
@@ -23,7 +23,7 @@
         <div class="Fight__character__info__life">
           <div class="Fight__character__info__life__other">
             <img src="../../../src/assets/images/sword.png" />
-            <p>20</p>
+            <p>{{ chosenPlayer.damage }}</p>
           </div>
           <div
             class="Fight__character__info__life__other Fight__character__info__life__other--life"
@@ -33,7 +33,7 @@
           </div>
           <div class="Fight__character__info__life__other">
             <img src="../../../src/assets/images/heal.png" />
-            <p>20</p>
+            <p>{{ chosenPlayer.heal }}</p>
           </div>
         </div>
         <div class="Fight__character__info__jokers">
@@ -71,11 +71,10 @@ const {
   useAttackWithDice,
   useHealWithDice,
   hp,
-  roundHealPlayer,
-  roundDamageEnemy,
   fightIsFinished,
   playerJokers,
   selectedPlayerJoker,
+  chosenPlayer
 } = useCharacter();
 
 const { isDetailJokerComponentActive, setJokerName, showChosenJoker } =
@@ -283,7 +282,7 @@ p {
 }
 
 .Fight__character__hero {
-  animation: pulsate 8s infinite;
+  animation: pulsatePlayer 8s infinite;
 }
 
 .Fight__character__attack {

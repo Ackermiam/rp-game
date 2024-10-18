@@ -5,7 +5,7 @@
       class="CharacterSlider__character"
     />
     <img src="../../src/assets/images/table4.png" class="CharacterSlider__table" />
-    <img src="../../src/assets/images/select.png" class="CharacterSlider__table__button" @click="setEnemy(config)"/>
+    <img src="../../src/assets/images/select.png" class="CharacterSlider__table__button" @click="isPlayerChosen ? setEnemy(config) : setPlayer(config)"/>
     <div class="CharacterSlider__table__infos">
       <h3>{{ config.name }}</h3>
       <div class="CharacterSlider__table__infos__info">
@@ -31,7 +31,7 @@
 <script setup lang="ts">
 import { useCharacter } from "../composable/character";
 
-const { setEnemy } = useCharacter();
+const { setEnemy, setPlayer, isPlayerChosen } = useCharacter();
 
 defineProps<{
   config: {

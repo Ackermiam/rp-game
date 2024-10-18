@@ -137,6 +137,18 @@ watch(isVersusMode, (newValue) => {
   }
 }
 
+@keyframes pulsatePlayer {
+  0% {
+    transform: scaleX(-1) scale(1);
+  }
+  50% {
+    transform: scaleX(-1) scale(1.1);
+  }
+  100% {
+    transform: scaleX(-1) scale(1);
+  }
+}
+
 @keyframes flame {
   0% {
     filter: drop-shadow(0 0 20px rgba(201, 164, 0, 0.74));

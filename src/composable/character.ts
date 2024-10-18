@@ -23,7 +23,9 @@ const {
 } = useJoker();
 
 const chosenEnemy = ref();
+const chosenPlayer = ref();
 const chosenBackground = ref();
+const isPlayerChosen = ref(false);
 
 const character: PlayerInterface = reactive(new Player("Mochi", 100, [], 0, 0));
 const characterenemy: PlayerInterface = reactive(new Player("", 0, [], 0, 0));
@@ -41,7 +43,7 @@ const roundIsPlaying = ref(false);
 const fightIsFinished = ref(false);
 
 let maxLifeEnemy = characterenemy.hp;
-const maxLifePlayer = character.hp;
+let maxLifePlayer = character.hp;
 
 export const useCharacter = () => {
   const setEnemy = (config: any) => {
@@ -53,6 +55,17 @@ export const useCharacter = () => {
     maxLifeEnemy = chosenEnemy.value.hp;
     toggleFight();
   };
+
+  const setPlayer = (config: any) => {
+    chosenPlayer.value = config;
+    character.hp = chosenPlayer.value.hp;
+    character.name = chosenPlayer.value.name;
+    character.maxdamage = chosenPlayer.value.damage;
+    character.maxheal = chosenPlayer.value.heal;
+    maxLifePlayer = chosenPlayer.value.hp;
+    isPlayerChosen.value = true;
+    console.log(config);
+  }
 
   const setNumberBackground = () => {
     chosenBackground.value = rollDice(Object.keys(story.backgrounds).length);
@@ -270,6 +283,7 @@ export const useCharacter = () => {
     character.resetStat(100);
     characterenemy.resetStat(maxLifeEnemy);
     deleteAbilities();
+    isPlayerChosen.value = false;
   };
 
   const resetFlag = () => {
@@ -297,8 +311,11 @@ export const useCharacter = () => {
     selectedEnemyJoker,
     character,
     chosenEnemy,
+    chosenPlayer,
     chosenBackground,
+    isPlayerChosen,
     setEnemy,
+    setPlayer,
     resetFlag,
     pushJoker,
     useHealWithDice,

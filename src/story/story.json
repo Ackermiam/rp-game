@@ -12,8 +12,8 @@
       "heal": 20,
       "damage": 20
     },
-    "Panda": {
-      "name": "Panda",
+    "Kentaro": {
+      "name": "Kentaro",
       "img": "/rp-game/assets/Kentaro.png",
       "hp": 100,
       "heal": 8,
