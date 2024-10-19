@@ -14,7 +14,7 @@ export const useGlobal = () => {
     isIntro.value = true;
     isNarrative.value = false;
     isFight.value = false;
-  }
+  };
 
   const toggleVersus = () => {
     isVersus.value = true;
@@ -22,7 +22,7 @@ export const useGlobal = () => {
     isIntro.value = false;
     isNarrative.value = false;
     isFight.value = false;
-  }
+  };
 
   const toggleNarrative = () => {
     isIntro.value = false;
