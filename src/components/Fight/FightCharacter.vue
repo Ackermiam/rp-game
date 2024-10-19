@@ -11,13 +11,16 @@
         </div>
       </transition>
       <img
-  :src="chosenPlayer.img"
-  class="Fight__character"
-  :class="[
-    'Fight__character__hero',
-    toggleAttackAnimation ? 'Fight__character__attack' : ''
-  ]"
-/>
+        :src="chosenPlayer.img"
+        class="Fight__character"
+        :class="[
+          'Fight__character__hero',
+          toggleAttackAnimation ? 'Fight__character__attack' : '',
+          roundHealPlayer > roundDamageEnemy
+            ? 'Fight__character__heal'
+            : ''
+        ]"
+      />
       <img src="../../../src/assets/images/table3.png" class="Fight__image" />
       <div class="Fight__character__info">
         <div class="Fight__character__info__life">
@@ -74,7 +77,9 @@ const {
   fightIsFinished,
   playerJokers,
   selectedPlayerJoker,
-  chosenPlayer
+  chosenPlayer,
+  roundHealPlayer,
+  roundDamageEnemy
 } = useCharacter();
 
 const { isDetailJokerComponentActive, setJokerName, showChosenJoker } =
@@ -286,7 +291,7 @@ p {
 }
 
 .Fight__character__attack {
-  animation: attack .3s ease-in-out;
+  animation: attack 0.3s ease-in-out;
 }
 
 .Fight__button {
@@ -370,7 +375,6 @@ p {
 @keyframes attack {
   0% {
     transform: translateX(0) scaleX(-1);
-
   }
   10% {
     transform: translateX(-25px) scaleX(-1);

@@ -29,6 +29,10 @@ export default class Player implements PlayerInterface {
     this.hp += amount;
   }
 
+  public maxHeal (value: number): void {
+    this.hp = value;
+  }
+
   public resetStat(amount: number) {
     this.hp = amount;
   }

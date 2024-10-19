@@ -44,7 +44,7 @@ const roundIsPlaying = ref(false);
 const fightIsFinished = ref(false);
 
 let maxLifeEnemy = characterenemy.hp;
-let maxLifePlayer = character.hp;
+let maxLifePlayer: number = character.hp;
 
 export const useCharacter = () => {
   const setEnemy = (config: any) => {
@@ -78,8 +78,9 @@ export const useCharacter = () => {
 
   const heal = (person: PlayerInterface, amount: number) => {
     if (person === character) {
+      console.log(maxLifePlayer)
       character.hp + amount > maxLifePlayer
-        ? (character.hp = maxLifePlayer)
+        ? person.maxHeal(maxLifePlayer)
         : person.heal(amount);
     }
     if (person === characterenemy) {
@@ -131,7 +132,7 @@ export const useCharacter = () => {
       return;
     }
     if (playerAlreadyPlayed.value === false) {
-      roundState.damagePlayer = rollDice(20);
+      roundState.damagePlayer = rollDice(character.maxdamage);
       playerAlreadyPlayed.value = true;
       playRound();
     }
@@ -142,7 +143,7 @@ export const useCharacter = () => {
       return;
     }
     if (playerAlreadyPlayed.value === false) {
-      roundState.healPlayer = rollDice(20);
+      roundState.healPlayer = rollDice(character.maxheal);
       playerAlreadyPlayed.value = true;
 
       playRound();
@@ -170,20 +171,20 @@ export const useCharacter = () => {
   };
 
   const resolveRound = () => {
-    if (roundState.healPlayer > 0) {
-      heal(character, roundState.healPlayer);
-    }
-
-    if (roundState.healEnemy > 0) {
-      heal(characterenemy, roundState.healEnemy);
-    }
-
     if (roundState.damagePlayer > 0) {
       attack(characterenemy, roundState.damagePlayer);
     }
 
     if (roundState.damageEnemy > 0) {
       attack(character, roundState.damageEnemy);
+    }
+
+    if (roundState.healPlayer > 0) {
+      heal(character, roundState.healPlayer);
+    }
+
+    if (roundState.healEnemy > 0) {
+      heal(characterenemy, roundState.healEnemy);
     }
   };
 
