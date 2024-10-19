@@ -15,14 +15,14 @@ defineProps<{
   name: string;
   description: string;
   img: string;
-}>()
+}>();
 </script>
 
 <style scoped>
 .Joker {
   margin: 15px;
   cursor: pointer;
-  transition: all .3s ease;
+  transition: all 0.3s ease;
 }
 .Joker:hover {
   filter: drop-shadow(0 0 10px rgba(201, 164, 0, 0.726));
@@ -51,7 +51,7 @@ defineProps<{
 
 .Joker__name {
   color: rgb(201, 164, 0);
-  font-size: .9vw;
+  font-size: 0.9vw;
   font-weight: 600;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
   margin: 0;
@@ -63,7 +63,7 @@ defineProps<{
 
 .Joker__description {
   color: #fff;
-  font-size: .8vw;
+  font-size: 0.8vw;
   font-weight: 600;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
   margin: 0;
@@ -91,7 +91,7 @@ defineProps<{
     font-size: 1.1vw;
   }
   .Joker__description {
-    font-size: .9vw;
+    font-size: 0.9vw;
   }
   .Joker__img {
     max-width: 80px;
