@@ -1,7 +1,10 @@
 <template>
   <div class="Narrative">
     <ParticlesComp id="tsparticles" :options="particlesoptions" />
-    <img class="Narrative__img" src="../../src/assets/images/golddicetable.png" />
+    <img
+      class="Narrative__img"
+      src="../../src/assets/images/golddicetable.png"
+    />
     <img
       v-if="isNarrativeCharacter"
       class="Narrative__character"
@@ -12,7 +15,7 @@
 
 <script setup lang="ts">
 import { useGlobal } from "../composable/global";
-import ParticlesComp from "./Particles.vue"
+import ParticlesComp from "./Particles.vue";
 
 const { isNarrativeCharacter } = useGlobal();
 
