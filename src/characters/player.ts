@@ -1,4 +1,4 @@
-import { PlayerInterface } from '../types/player';
+import { PlayerInterface } from "../types/player";
 
 export default class Player implements PlayerInterface {
   public name: string;
@@ -7,7 +7,13 @@ export default class Player implements PlayerInterface {
   public maxheal: number;
   public maxdamage: number;
 
-  constructor(name: string, hp: number, abilities: Record<string, string | boolean>[], maxheal: number, maxdamage: number) {
+  constructor(
+    name: string,
+    hp: number,
+    abilities: Record<string, string | boolean>[],
+    maxheal: number,
+    maxdamage: number
+  ) {
     this.name = name;
     this.hp = hp;
     this.abilities = abilities;
@@ -17,7 +23,7 @@ export default class Player implements PlayerInterface {
 
   public attack(enemy: PlayerInterface, damage: number): void {
     if (enemy.hp > 0) {
-      if(enemy.hp - damage < 0) {
+      if (enemy.hp - damage < 0) {
         enemy.hp = 0;
       } else {
         enemy.hp -= damage;
@@ -29,7 +35,7 @@ export default class Player implements PlayerInterface {
     this.hp += amount;
   }
 
-  public maxHeal (value: number): void {
+  public maxHeal(value: number): void {
     this.hp = value;
   }
 

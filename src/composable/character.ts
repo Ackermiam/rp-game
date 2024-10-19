@@ -78,7 +78,7 @@ export const useCharacter = () => {
 
   const heal = (person: PlayerInterface, amount: number) => {
     if (person === character) {
-      console.log(maxLifePlayer)
+      console.log(maxLifePlayer);
       character.hp + amount > maxLifePlayer
         ? person.maxHeal(maxLifePlayer)
         : person.heal(amount);
