@@ -4,7 +4,11 @@
       <button @click="temporarilyStoryMode()">
         <img src="../../src/assets/images/histoire.png" />
       </button>
-      <button @mouseover="changeBackground" @mouseleave="resetBackground" @click="toggleVersus()">
+      <button
+        @mouseover="changeBackground"
+        @mouseleave="resetBackground"
+        @click="toggleVersus()"
+      >
         <img src="../../src/assets/images/versusmodeone.png" />
       </button>
       <ParticlesComp
@@ -21,12 +25,12 @@
 import { ref } from "vue";
 import { useGlobal } from "../composable/global";
 import ParticlesComp from "./Particles.vue";
-import Version from "../../package.json"
+import Version from "../../package.json";
 
 const introRef = ref<HTMLDivElement | null>(null);
 const showParticles = ref(false);
 
-const {toggleNarrative, toggleVersus} = useGlobal();
+const { toggleNarrative, toggleVersus } = useGlobal();
 
 const changeBackground = () => {
   if (introRef.value) {
@@ -47,9 +51,10 @@ const resetBackground = () => {
 };
 
 const temporarilyStoryMode = () => {
-  alert('En cours de développement, seul le VersusMode est disponible pour le moment')
-
-}
+  alert(
+    "En cours de développement, seul le VersusMode est disponible pour le moment"
+  );
+};
 
 const particlesoptions = {
   fpsLimit: 40,
@@ -121,7 +126,7 @@ const particlesoptions = {
   position: absolute;
   bottom: 10px;
   color: #000;
-  font-size: .9em;
+  font-size: 0.9em;
   margin: 0;
 }
 
@@ -129,7 +134,7 @@ button {
   z-index: 10000;
   background: none;
   border: none;
-  transition: all .6s ease;
+  transition: all 0.6s ease;
   cursor: pointer;
 }
 
