@@ -5,7 +5,7 @@ const jokers = [
     descript: "Double les dégâts pendant ce tour",
     isBlockingTour: false,
     effect: "damagePlayer",
-    effectEnemy: "damageEnemy"
+    effectEnemy: "damageEnemy",
   },
   {
     name: "Coup De Grâce",
@@ -13,7 +13,7 @@ const jokers = [
     descript: "Attaque de 20 dégâts",
     isBlockingTour: true,
     effect: "damagePlayer",
-    effectEnemy: "damageEnemy"
+    effectEnemy: "damageEnemy",
   },
   {
     name: "Soin puissant",
@@ -21,7 +21,7 @@ const jokers = [
     descript: "Double le heal pendant ce tour",
     isBlockingTour: false,
     effect: "healPlayer",
-    effectEnemy: "healEnemy"
+    effectEnemy: "healEnemy",
   },
   {
     name: "Bouclier de Pierre",
@@ -29,7 +29,7 @@ const jokers = [
     descript: "Divise les dégâts ennemi par deux pendant ce tour",
     isBlockingTour: false,
     effect: "damageEnemy",
-    effectEnemy: "damagePlayer"
+    effectEnemy: "damagePlayer",
   },
   {
     name: "Bouclier Divin",
@@ -37,7 +37,7 @@ const jokers = [
     descript: "Bloque les dégâts ennemi pendant ce tour",
     isBlockingTour: false,
     effect: "damageEnemy",
-    effectEnemy: "damagePlayer"
+    effectEnemy: "damagePlayer",
   },
   {
     name: "Double Tranchant",
@@ -45,7 +45,7 @@ const jokers = [
     descript: "Les dégâts de l'ennemi sont bloqués à 10 pour ce tour",
     isBlockingTour: false,
     effect: "damageEnemy",
-    effectEnemy: "damagePlayer"
+    effectEnemy: "damagePlayer",
   },
   {
     name: "Soin Divin",
@@ -53,7 +53,7 @@ const jokers = [
     descript: "Soigne de 20 PV",
     isBlockingTour: true,
     effect: "healPlayer",
-    effectEnemy: "healEnemy"
+    effectEnemy: "healEnemy",
   },
   {
     name: "Soin rapide",
@@ -61,7 +61,7 @@ const jokers = [
     descript: "Soigne de 10 PV",
     isBlockingTour: false,
     effect: "healPlayer",
-    effectEnemy: "healEnemy"
+    effectEnemy: "healEnemy",
   },
 ];
 
