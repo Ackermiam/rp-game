@@ -1,17 +1,16 @@
-import { ref } from 'vue';
+import { ref } from "vue";
 
 const isDetailJokerComponentActive = ref(false);
-const chosenJokerName = ref('');
+const chosenJokerName = ref("");
 const showChosenJoker = ref(false);
 const showChosenEnemyJoker = ref(false);
 const selectedPlayerJoker = ref();
 const selectedEnemyJoker = ref();
 
 export const useJoker = () => {
-
   const setJokerName = (name: string) => {
     chosenJokerName.value = name;
-  }
+  };
 
   const resetTourJoker = () => {
     selectedPlayerJoker.value = "";
@@ -28,6 +27,6 @@ export const useJoker = () => {
     selectedPlayerJoker,
     selectedEnemyJoker,
     setJokerName,
-    resetTourJoker
-  }
-}
+    resetTourJoker,
+  };
+};
