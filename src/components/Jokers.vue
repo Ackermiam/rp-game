@@ -1,12 +1,27 @@
 <template>
   <div class="Jokers">
-    <JokerDetail v-if="isDetailJokerComponentActive" :name="chosenJokerName" @activate-joker="selectRandom = false; selectJoker(currentIndex)"/>
+    <JokerDetail
+      v-if="isDetailJokerComponentActive"
+      :name="chosenJokerName"
+      @activate-joker="
+        selectRandom = false;
+        selectJoker(currentIndex);
+      "
+    />
     <div v-if="jokers.length > 0" class="Jokers__imgs">
       <transition name="slide">
-        <img v-show="blockChose === 0" src="../../src/assets/images/playerturn.png" class="Jokers__turnimg"/>
+        <img
+          v-show="blockChose === 0"
+          src="../../src/assets/images/playerturn.png"
+          class="Jokers__turnimg"
+        />
       </transition>
       <transition name="slide">
-        <img v-show="blockChose === 1" src="../../src/assets/images/enemyturn.png" class="Jokers__turnimg"/>
+        <img
+          v-show="blockChose === 1"
+          src="../../src/assets/images/enemyturn.png"
+          class="Jokers__turnimg"
+        />
       </transition>
     </div>
     <div class="Jokers__support">
@@ -16,10 +31,20 @@
         :name="joker.name"
         :description="joker.descript"
         img="/rp-game/assets/cardjoker.png"
-        @click="blockChose === 1 ? '' : toggleAllSettingsForJokerDetails(joker.name, index)"
+        @click="
+          blockChose === 1
+            ? ''
+            : toggleAllSettingsForJokerDetails(joker.name, index)
+        "
       />
     </div>
-    <Button v-if="selectRandom" :filled="false" @click="selectRandomJokers()" text="Choix aléatoire" style="margin-top: 25px"/>
+    <Button
+      v-if="selectRandom"
+      :filled="false"
+      @click="selectRandomJokers()"
+      text="Choix aléatoire"
+      style="margin-top: 25px"
+    />
   </div>
 </template>
 
@@ -68,7 +93,7 @@ const selectJoker = (index: number) => {
 const selectRandomJokers = () => {
   selectRandom.value = false;
   selectRandomJoker();
-}
+};
 
 const selectJokerEnemy = () => {
   const random = Math.floor(Math.random() * jokers.value.length);
@@ -77,12 +102,12 @@ const selectJokerEnemy = () => {
 };
 
 const selectRandomJoker = () => {
-  for(let i = 0; i < jokers.value.length; i++) {
+  for (let i = 0; i < jokers.value.length; i++) {
     blockChose.value = 1;
     const random = Math.floor(Math.random() * jokers.value.length);
     selectJoker(random);
   }
-}
+};
 </script>
 
 <style scoped>
@@ -111,7 +136,7 @@ const selectRandomJoker = () => {
   transform: translateX(-50%);
 }
 
-.Jokers__imgs{
+.Jokers__imgs {
   top: 1vh;
   position: absolute;
   left: 50%;
