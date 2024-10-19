@@ -1,5 +1,5 @@
 <template>
-<vue-particles :id="id" :options="options" />
+  <vue-particles :id="id" :options="options" />
 </template>
 
 <script setup lang="ts">
