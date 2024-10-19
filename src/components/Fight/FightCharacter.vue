@@ -16,9 +16,7 @@
         :class="[
           'Fight__character__hero',
           toggleAttackAnimation ? 'Fight__character__attack' : '',
-          roundHealPlayer > roundDamageEnemy
-            ? 'Fight__character__heal'
-            : ''
+          roundHealPlayer > roundDamageEnemy ? 'Fight__character__heal' : '',
         ]"
       />
       <img src="../../../src/assets/images/table3.png" class="Fight__image" />
@@ -79,7 +77,7 @@ const {
   selectedPlayerJoker,
   chosenPlayer,
   roundHealPlayer,
-  roundDamageEnemy
+  roundDamageEnemy,
 } = useCharacter();
 
 const { isDetailJokerComponentActive, setJokerName, showChosenJoker } =

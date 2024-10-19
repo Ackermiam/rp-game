@@ -1,11 +1,15 @@
 <template>
   <div class="CharacterSlider">
+    <img :src="config.img" class="CharacterSlider__character" />
     <img
-      :src="config.img"
-      class="CharacterSlider__character"
+      src="../../src/assets/images/table4.png"
+      class="CharacterSlider__table"
     />
-    <img src="../../src/assets/images/table4.png" class="CharacterSlider__table" />
-    <img src="../../src/assets/images/select.png" class="CharacterSlider__table__button" @click="isPlayerChosen ? setEnemy(config) : setPlayer(config)"/>
+    <img
+      src="../../src/assets/images/select.png"
+      class="CharacterSlider__table__button"
+      @click="isPlayerChosen ? setEnemy(config) : setPlayer(config)"
+    />
     <div class="CharacterSlider__table__infos">
       <h3>{{ config.name }}</h3>
       <div class="CharacterSlider__table__infos__info">
@@ -13,9 +17,7 @@
           <img src="../../src/assets/images/sword.png" />
           <p>{{ config.damage }}</p>
         </div>
-        <div
-          class="CharacterSlider__table__infos__info"
-        >
+        <div class="CharacterSlider__table__infos__info">
           <img src="../../src/assets/images/vie.png" />
           <p>{{ config.hp }} PV</p>
         </div>
@@ -57,17 +59,16 @@ defineProps<{
   pointer-events: none;
   width: 300px;
   z-index: 1;
-  transition: all .3s ease;
+  transition: all 0.3s ease;
   filter: blur(2px);
 }
-
 
 .CharacterSlider__table__button {
   position: absolute;
   width: 250px;
   z-index: 2;
   bottom: -20%;
-  transition: all .4s ease;
+  transition: all 0.4s ease;
 }
 
 .CharacterSlider__table__button:hover {
@@ -139,7 +140,7 @@ defineProps<{
   pointer-events: none;
   top: -120%;
   height: 300px;
-  transition: all .3s ease;
+  transition: all 0.3s ease;
 }
 
 @media (max-width: 1200px) {
@@ -164,7 +165,7 @@ defineProps<{
   }
 
   .CharacterSlider__table__infos p {
-    font-size: .9em;
+    font-size: 0.9em;
     margin: 0;
     margin-bottom: 10px;
   }

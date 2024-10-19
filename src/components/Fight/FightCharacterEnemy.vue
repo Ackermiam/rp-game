@@ -264,8 +264,8 @@ p {
   max-width: 110px;
   aspect-ratio: 626/533;
   z-index: 1;
-  background: url("../../../src/assets/images/woodenbutton.png") no-repeat center
-    center;
+  background: url("../../../src/assets/images/woodenbutton.png") no-repeat
+    center center;
   background-size: cover;
   display: flex;
   justify-content: center;
