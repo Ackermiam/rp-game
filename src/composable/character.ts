@@ -12,7 +12,11 @@ import * as jokers from "../utils/jokersFunc";
 const { toggleNarrative, toggleFight, toggleVersus, isVersusMode } =
   useGlobal();
 
-const { displayFight, displayWin, displayLose } = useFightFlag();
+const {
+  displayFight,
+  displayWin,
+  displayLose
+} = useFightFlag();
 
 const {
   isDetailJokerComponentActive,
